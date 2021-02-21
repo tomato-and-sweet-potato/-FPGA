@@ -1,0 +1,223 @@
+----------------------------------------------------------------------
+Report for cell top.TECH
+Register bits:  605 of 4635 (13.053%)
+I/O cells:      17
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                 BB         1          100.0
+                              CCU2D       262          100.0
+                            FD1P3AX       114          100.0
+                            FD1P3AY         9          100.0
+                            FD1P3IX       225          100.0
+                            FD1P3JX         2          100.0
+                            FD1S3AX        62          100.0
+                            FD1S3AY        12          100.0
+                            FD1S3IX       180          100.0
+                            FD1S3JX         1          100.0
+                                GSR         1          100.0
+                                 IB         8          100.0
+                            L6MUX21         5          100.0
+                               LUT4      1277          100.0
+                                 OB         8          100.0
+                              PFUMX       126          100.0
+                          ROM128X1A        39          100.0
+SUB MODULES
+                                BCD         1
+                             BCD_U3         1
+                             BCD_U4         1
+                             BCD_U5         1
+                             BCD_U6         1
+                             BCD_U7         1
+                             Beeper         1
+                           DS18B20Z         1
+                                KEY         1
+                             KEY_U0         1
+                             KEY_U1         1
+                          OLED12832         1
+        divide(WIDTH=32,N=12000000)         1
+     divide(WIDTH=32,N=12000000)_U2         1
+                         music_play         1
+uart_recv(CLK_FREQ=12000000,UART_BPS=115200)         1
+                          uart_send         1
+                              TOTAL      2349
+----------------------------------------------------------------------
+Report for cell music_play.v1
+Instance Path : m_music_play
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        35           13.4
+                            FD1P3AX        17           14.9
+                            FD1P3AY         1           11.1
+                            FD1P3IX        41           18.2
+                            FD1S3AX         2            3.2
+                               LUT4        59            4.6
+                              TOTAL       155
+----------------------------------------------------------------------
+Report for cell BCD.v1
+Instance Path : bcd_sec
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        30            2.3
+                              PFUMX         1            0.8
+                              TOTAL        31
+----------------------------------------------------------------------
+Report for cell BCD_U5.v1
+Instance Path : bcd_hour_warning
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        33            2.6
+                              PFUMX         2            1.6
+                              TOTAL        35
+----------------------------------------------------------------------
+Report for cell KEY_U0.v1
+Instance Path : key_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        10            3.8
+                            FD1P3AY         1           11.1
+                            FD1S3AY         3           25.0
+                            FD1S3IX        18           10.0
+                               LUT4        10            0.8
+                              TOTAL        42
+----------------------------------------------------------------------
+Report for cell uart_recv(CLK_FREQ=12000000,UART_BPS=115200).v1
+Instance Path : u_uart_recv
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            3.4
+                            FD1P3IX        23           10.2
+                            FD1P3JX         1           50.0
+                            FD1S3AX         4            6.5
+                            FD1S3IX        24           13.3
+                               LUT4        38            3.0
+                              TOTAL        99
+----------------------------------------------------------------------
+Report for cell KEY_U1.v1
+Instance Path : key_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        10            3.8
+                            FD1P3AY         1           11.1
+                            FD1S3AY         3           25.0
+                            FD1S3IX        18           10.0
+                               LUT4        11            0.9
+                              TOTAL        43
+----------------------------------------------------------------------
+Report for cell divide(WIDTH=32,N=12000000)_U2.v1
+Instance Path : devide_1s
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        30           11.5
+                            FD1S3AX         1            1.6
+                            FD1S3IX        32           17.8
+                               LUT4        11            0.9
+                              TOTAL        74
+----------------------------------------------------------------------
+Report for cell uart_send.v1
+Instance Path : u_uart_send
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            3.4
+                            FD1P3IX        22            9.8
+                            FD1P3JX         1           50.0
+                            FD1S3AX         3            4.8
+                            FD1S3IX        16            8.9
+                            FD1S3JX         1          100.0
+                               LUT4        30            2.3
+                              PFUMX         1            0.8
+                              TOTAL        83
+----------------------------------------------------------------------
+Report for cell BCD_U4.v1
+Instance Path : bcd_min
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        19            1.5
+                              TOTAL        19
+----------------------------------------------------------------------
+Report for cell BCD_U3.v1
+Instance Path : bcd_min_warning
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        27            2.1
+                              PFUMX         2            1.6
+                              TOTAL        29
+----------------------------------------------------------------------
+Report for cell DS18B20Z.v1
+Instance Path : u_DS18B20Z
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        22            8.4
+                            FD1P3AX        42           36.8
+                            FD1P3IX        40           17.8
+                            FD1S3AX         2            3.2
+                            FD1S3IX         3            1.7
+                            L6MUX21         2           40.0
+                               LUT4       228           17.9
+                              PFUMX        19           15.1
+                              TOTAL       358
+----------------------------------------------------------------------
+Report for cell BCD_U7.v1
+Instance Path : bcd_T
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        20            1.6
+                              PFUMX         1            0.8
+                              TOTAL        21
+----------------------------------------------------------------------
+Report for cell Beeper.v1
+Instance Path : m_beep
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        20            7.6
+                            FD1S3AX         1            1.6
+                            FD1S3IX        18           10.0
+                               LUT4        39            3.1
+                              PFUMX        16           12.7
+                              TOTAL        94
+----------------------------------------------------------------------
+Report for cell BCD_U6.v1
+Instance Path : bcd_hour
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        33            2.6
+                              PFUMX         2            1.6
+                              TOTAL        35
+----------------------------------------------------------------------
+Report for cell OLED12832.v1
+Instance Path : oled1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        62           23.7
+                            FD1P3AX        14           12.3
+                            FD1P3AY         4           44.4
+                            FD1P3IX        65           28.9
+                            FD1S3AX        32           51.6
+                            FD1S3AY         3           25.0
+                            FD1S3IX        33           18.3
+                            L6MUX21         3           60.0
+                               LUT4       507           39.7
+                              PFUMX        75           59.5
+SUB MODULES
+        divide(WIDTH=32,N=12000000)         1
+                              TOTAL       799
+----------------------------------------------------------------------
+Report for cell divide(WIDTH=32,N=12000000).v1
+Instance Path : oled1.divide_1Hz
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        30           11.5
+                            FD1S3AX         1            1.6
+                            FD1S3IX        32           17.8
+                               LUT4        12            0.9
+                              TOTAL        75
+----------------------------------------------------------------------
+Report for cell KEY.v1
+Instance Path : key_3
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        10            3.8
+                            FD1P3AY         1           11.1
+                            FD1S3AY         3           25.0
+                            FD1S3IX        18           10.0
+                               LUT4         8            0.6
+                              TOTAL        40

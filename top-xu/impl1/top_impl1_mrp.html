@@ -1,0 +1,1284 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+             Lattice Mapping Report File for Design Module 'top'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a MachXO2 -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial
+     top_impl1.ngd -o top_impl1_map.ncd -pr top_impl1.prf -mp top_impl1.mrp -lpf
+     D:/new porject/top-xu/impl1/top_impl1.lpf -lpf D:/new
+     porject/top-xu/top.lpf -c 0 -gui -msgset D:/new porject/top-xu/promote.xml
+     
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-4000HCCSBGA132
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
+Mapped on:  02/21/21  21:09:52
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:    605 out of  4635 (13%)
+      PFU registers:          605 out of  4320 (14%)
+      PIO registers:            0 out of   315 (0%)
+   Number of SLICEs:      1062 out of  2160 (49%)
+      SLICEs as Logic/ROM:   1062 out of  2160 (49%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:        262 out of  2160 (12%)
+   Number of LUT4s:        2113 out of  4320 (49%)
+      Number used as logic LUTs:        1589
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      524
+      Number used as shift registers:     0
+   Number of PIO sites used: 17 + 4(JTAG) out of 105 (20%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  4
+     Net sys_clk_c: 337 loads, 337 rising, 0 falling (Driver: PIO sys_clk )
+     Net clk_1s: 20 loads, 20 rising, 0 falling (Driver: devide_1s/clk_p_29 )
+     Net u_DS18B20Z/clk_1mhz: 2 loads, 2 rising, 0 falling (Driver:
+
+     u_DS18B20Z/clk_1mhz_112 )
+     Net oled1/clk_in_1Hz: 1 loads, 1 rising, 0 falling (Driver:
+     oled1/divide_1Hz/clk_p_29 )
+   Number of Clock Enables:  81
+     Net sys_clk_c_enable_77: 4 loads, 4 LSLICEs
+     Net clk_1s: 4 loads, 4 LSLICEs
+     Net clk_1s_enable_17: 5 loads, 5 LSLICEs
+     Net clk_1s_enable_9: 5 loads, 5 LSLICEs
+     Net sys_clk_c_enable_166: 4 loads, 4 LSLICEs
+     Net sys_clk_c_enable_146: 4 loads, 4 LSLICEs
+     Net sys_clk_c_enable_139: 4 loads, 4 LSLICEs
+     Net sys_clk_c_enable_324: 4 loads, 4 LSLICEs
+     Net sys_clk_c_enable_263: 3 loads, 3 LSLICEs
+     Net clk_1s_enable_10: 1 loads, 1 LSLICEs
+     Net sys_clk_c_enable_283: 4 loads, 4 LSLICEs
+     Net warning_time_7__N_144: 1 loads, 1 LSLICEs
+     Net sys_clk_c_enable_294: 9 loads, 9 LSLICEs
+     Net sys_clk_c_enable_100: 1 loads, 1 LSLICEs
+     Net sys_clk_c_enable_323: 5 loads, 5 LSLICEs
+     Net m_music_play/sys_clk_c_enable_295: 9 loads, 9 LSLICEs
+     Net m_music_play/sys_clk_c_enable_157: 2 loads, 2 LSLICEs
+     Net m_music_play/sys_clk_c_enable_150: 3 loads, 3 LSLICEs
+     Net sys_clk_c_enable_23: 1 loads, 1 LSLICEs
+     Net m_music_play/sys_clk_c_enable_125: 2 loads, 2 LSLICEs
+     Net m_music_play/sys_clk_c_enable_151: 1 loads, 1 LSLICEs
+     Net m_music_play/sys_clk_c_enable_152: 1 loads, 1 LSLICEs
+     Net m_music_play/sys_clk_c_enable_153: 1 loads, 1 LSLICEs
+     Net m_music_play/sys_clk_c_enable_154: 1 loads, 1 LSLICEs
+     Net m_music_play/sys_clk_c_enable_155: 1 loads, 1 LSLICEs
+     Net m_music_play/sys_clk_c_enable_156: 1 loads, 1 LSLICEs
+     Net key_2/sys_clk_c_enable_262: 1 loads, 1 LSLICEs
+     Net sys_clk_c_enable_72: 4 loads, 4 LSLICEs
+     Net u_uart_recv/sys_clk_c_enable_208: 8 loads, 8 LSLICEs
+     Net key_1/sys_clk_c_enable_284: 1 loads, 1 LSLICEs
+     Net u_uart_send/sys_clk_c_enable_321: 4 loads, 4 LSLICEs
+     Net u_uart_send/sys_clk_c_enable_191: 8 loads, 8 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_6: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_7: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_13: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_247: 11 loads, 11 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_31: 2 loads, 2 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_40: 4 loads, 4 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_43: 2 loads, 2 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_44: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_79: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_80: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_84: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_296: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/one_wire_N_639: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_255: 2 loads, 2 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_299: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_232: 3 loads, 3 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_224: 2 loads, 2 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_158: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_159: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_227: 2 loads, 2 LSLICEs
+
+     Net u_DS18B20Z/sys_clk_c_enable_316: 3 loads, 3 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_309: 2 loads, 2 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_301: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_286: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_292: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_289: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_308: 2 loads, 2 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_291: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_304: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_300: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_302: 1 loads, 1 LSLICEs
+     Net u_DS18B20Z/sys_clk_c_enable_303: 1 loads, 1 LSLICEs
+     Net oled1/sys_clk_c_enable_319: 3 loads, 3 LSLICEs
+     Net oled1/sys_clk_c_enable_298: 7 loads, 7 LSLICEs
+     Net oled1/sys_clk_c_enable_129: 1 loads, 1 LSLICEs
+     Net oled1/sys_clk_c_enable_11: 1 loads, 1 LSLICEs
+     Net oled1/sys_clk_c_enable_269: 9 loads, 9 LSLICEs
+     Net oled1/sys_clk_c_enable_310: 3 loads, 3 LSLICEs
+     Net oled1/sys_clk_c_enable_219: 5 loads, 5 LSLICEs
+     Net oled1/sys_clk_c_enable_314: 3 loads, 3 LSLICEs
+     Net oled1/sys_clk_c_enable_220: 3 loads, 3 LSLICEs
+     Net oled1/sys_clk_c_enable_293: 9 loads, 9 LSLICEs
+     Net oled1/sys_clk_c_enable_241: 1 loads, 1 LSLICEs
+     Net oled1/sys_clk_c_enable_252: 1 loads, 1 LSLICEs
+     Net oled1/sys_clk_c_enable_246: 1 loads, 1 LSLICEs
+     Net oled1/sys_clk_c_enable_276: 3 loads, 3 LSLICEs
+     Net oled1/sys_clk_c_enable_253: 1 loads, 1 LSLICEs
+     Net oled1/sys_clk_c_enable_254: 1 loads, 1 LSLICEs
+     Net key_3/sys_clk_c_enable_285: 1 loads, 1 LSLICEs
+   Number of LSRs:  39
+     Net n12199: 4 loads, 4 LSLICEs
+     Net n12201: 4 loads, 4 LSLICEs
+     Net sys_rst_n_c: 1 loads, 1 LSLICEs
+     Net n22156: 2 loads, 2 LSLICEs
+     Net warning_time_7__N_144: 5 loads, 5 LSLICEs
+     Net n22032: 4 loads, 4 LSLICEs
+     Net m_music_play/sys_clk_c_enable_295: 9 loads, 9 LSLICEs
+     Net m_music_play/n22100: 9 loads, 9 LSLICEs
+     Net m_music_play/n22092: 5 loads, 5 LSLICEs
+     Net key_2/key_edge: 10 loads, 10 LSLICEs
+     Net rx_flag: 12 loads, 12 LSLICEs
+     Net u_uart_recv/uart_data_7__N_1456: 4 loads, 4 LSLICEs
+     Net u_uart_recv/n22006: 9 loads, 9 LSLICEs
+     Net key_1/key_edge: 10 loads, 10 LSLICEs
+     Net devide_1s/n22004: 17 loads, 17 LSLICEs
+     Net u_uart_send/uart_tx_busy: 9 loads, 9 LSLICEs
+     Net u_uart_send/n30755: 4 loads, 4 LSLICEs
+     Net u_uart_send/n22005: 9 loads, 9 LSLICEs
+     Net u_DS18B20Z/n38674: 2 loads, 2 LSLICEs
+     Net u_DS18B20Z/n25968: 2 loads, 2 LSLICEs
+     Net u_DS18B20Z/n31163: 3 loads, 3 LSLICEs
+     Net u_DS18B20Z/n22049: 10 loads, 10 LSLICEs
+     Net u_DS18B20Z/n22024: 3 loads, 3 LSLICEs
+     Net u_DS18B20Z/n25977: 2 loads, 2 LSLICEs
+     Net u_DS18B20Z/n33712: 2 loads, 2 LSLICEs
+     Net m_beep/n3492: 10 loads, 10 LSLICEs
+
+     Net oled1/n22086: 5 loads, 5 LSLICEs
+     Net oled1/n22036: 9 loads, 9 LSLICEs
+     Net oled1/n25424: 2 loads, 2 LSLICEs
+     Net oled1/n21962: 1 loads, 1 LSLICEs
+     Net oled1/n25415: 1 loads, 1 LSLICEs
+     Net oled1/n25407: 1 loads, 1 LSLICEs
+     Net oled1/n22136: 9 loads, 9 LSLICEs
+     Net oled1/n22129: 4 loads, 4 LSLICEs
+     Net oled1/n21994: 2 loads, 2 LSLICEs
+     Net oled1/n25434: 3 loads, 3 LSLICEs
+     Net oled1/n21989: 2 loads, 2 LSLICEs
+     Net oled1/divide_1Hz/n22010: 17 loads, 17 LSLICEs
+     Net key_3/key_edge: 10 loads, 10 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net n2524: 275 loads
+     Net n38539: 274 loads
+     Net n38571: 271 loads
+     Net n38583: 270 loads
+     Net n2521: 142 loads
+     Net oled1/state_2: 76 loads
+     Net n2523: 75 loads
+     Net oled1/state_0: 67 loads
+     Net u_DS18B20Z/state_0: 55 loads
+     Net u_DS18B20Z/state_back_2_N_482_2: 53 loads
+
+
+
+
+   Number of warnings:  3
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+WARNING - map: D:/new porject/top-xu/top.lpf(17): Semantic error in "LOCATE COMP
+     "sw3" SITE "M9" ;": COMP "sw3" cannot be found in design. This preference
+     has been disabled.
+WARNING - map: input pad net 'sw4' has no legal load.
+WARNING - map: IO buffer missing for top level port sw4...logic will be
+     discarded.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| sw2                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sw1                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sys_rst_n           | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+| sys_clk             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| led                 | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| oled_mosi           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| oled_sck            | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| oled_dc             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| oled_cs             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| oled_res            | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| uart_txd            | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| beep                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| uart_rxd            | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| one_wire            | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| key3                | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| key2                | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| key1                | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block i29137 undriven or does not drive anything - clipped.
+Signal oled1/rst_n_in_N_1482 was merged into signal sys_rst_n_c
+Signal oled1/n37729 was merged into signal oled1/state_0
+Signal n14003 was merged into signal u_DS18B20Z/one_wire_N_632
+Signal u_uart_send/n38723 was merged into signal u_uart_send/uart_tx_busy
+Signal n12208 was merged into signal warning_time_7__N_144
+Signal u_uart_recv/n12211 was merged into signal rx_flag
+Signal u_uart_recv/n22003 was merged into signal u_uart_recv/uart_data_7__N_1456
+     
+Signal GND_net undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal key_3/cnt_3012_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal key_3/cnt_3012_add_4_1/CI undriven or does not drive anything - clipped.
+Signal key_3/cnt_3012_add_4_19/S1 undriven or does not drive anything - clipped.
+     
+Signal key_3/cnt_3012_add_4_19/CO undriven or does not drive anything - clipped.
+     
+Signal oled1/divide_1Hz/cnt_p_3022_add_4_33/S1 undriven or does not drive
+     anything - clipped.
+Signal oled1/divide_1Hz/cnt_p_3022_add_4_33/CO undriven or does not drive
+     anything - clipped.
+Signal oled1/divide_1Hz/add_24019_2/S1 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_2/S0 undriven or does not drive anything -
+
+     clipped.
+Signal oled1/divide_1Hz/add_24019_2/CI undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_4/S1 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_4/S0 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_6/S1 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_6/S0 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_8/S1 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_8/S0 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_10/S1 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_10/S0 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_12/S1 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_12/S0 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_14/S1 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_14/S0 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_16/S1 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_16/S0 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_18/S1 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_18/S0 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_20/S1 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_20/S0 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_22/S1 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_22/S0 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_24/S1 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_24/S0 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_cout/S1 undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/add_24019_cout/CO undriven or does not drive anything -
+     clipped.
+Signal oled1/divide_1Hz/cnt_p_3022_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal oled1/divide_1Hz/cnt_p_3022_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal oled1/num_3023_add_4_1/S0 undriven or does not drive anything - clipped.
+
+Signal oled1/num_3023_add_4_1/CI undriven or does not drive anything - clipped.
+Signal oled1/num_3023_add_4_9/S1 undriven or does not drive anything - clipped.
+Signal oled1/num_3023_add_4_9/CO undriven or does not drive anything - clipped.
+Signal oled1/add_57_1/S0 undriven or does not drive anything - clipped.
+Signal oled1/add_57_1/CI undriven or does not drive anything - clipped.
+Signal oled1/add_57_17/S1 undriven or does not drive anything - clipped.
+Signal oled1/add_57_17/CO undriven or does not drive anything - clipped.
+Signal oled1/add_131_1/S0 undriven or does not drive anything - clipped.
+Signal oled1/add_131_1/CI undriven or does not drive anything - clipped.
+Signal oled1/sub_2302_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal oled1/sub_2302_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal oled1/sub_2302_add_2_1/CI undriven or does not drive anything - clipped.
+Signal oled1/sub_2302_add_2_3/S1 undriven or does not drive anything - clipped.
+Signal oled1/sub_2302_add_2_3/S0 undriven or does not drive anything - clipped.
+Signal oled1/sub_2302_add_2_5/S1 undriven or does not drive anything - clipped.
+Signal oled1/sub_2302_add_2_5/S0 undriven or does not drive anything - clipped.
+Signal oled1/sub_2302_add_2_7/S1 undriven or does not drive anything - clipped.
+Signal oled1/sub_2302_add_2_7/S0 undriven or does not drive anything - clipped.
+Signal oled1/sub_2302_add_2_9/S1 undriven or does not drive anything - clipped.
+Signal oled1/sub_2302_add_2_9/S0 undriven or does not drive anything - clipped.
+Signal oled1/sub_2302_add_2_11/S1 undriven or does not drive anything - clipped.
+     
+Signal oled1/sub_2302_add_2_11/S0 undriven or does not drive anything - clipped.
+     
+Signal oled1/add_131_17/S1 undriven or does not drive anything - clipped.
+Signal oled1/add_131_17/CO undriven or does not drive anything - clipped.
+Signal oled1/sub_2302_add_2_13/S1 undriven or does not drive anything - clipped.
+     
+Signal oled1/sub_2302_add_2_13/S0 undriven or does not drive anything - clipped.
+     
+Signal oled1/sub_2302_add_2_15/S1 undriven or does not drive anything - clipped.
+     
+Signal oled1/sub_2302_add_2_15/S0 undriven or does not drive anything - clipped.
+     
+Signal oled1/sub_2302_add_2_17/S0 undriven or does not drive anything - clipped.
+     
+Signal oled1/sub_2302_add_2_17/CO undriven or does not drive anything - clipped.
+     
+Signal m_beep/time_cnt_3018_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal m_beep/time_cnt_3018_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal m_beep/time_cnt_3018_add_4_19/S1 undriven or does not drive anything -
+     clipped.
+Signal m_beep/time_cnt_3018_add_4_19/CO undriven or does not drive anything -
+     clipped.
+Signal m_beep/add_1759_1/S0 undriven or does not drive anything - clipped.
+Signal m_beep/add_1759_1/CI undriven or does not drive anything - clipped.
+Signal m_beep/add_1759_19/CO undriven or does not drive anything - clipped.
+Signal u_DS18B20Z/add_48_1/S0 undriven or does not drive anything - clipped.
+Signal u_DS18B20Z/add_48_1/CI undriven or does not drive anything - clipped.
+Signal u_DS18B20Z/add_48_21/S1 undriven or does not drive anything - clipped.
+Signal u_DS18B20Z/add_48_21/CO undriven or does not drive anything - clipped.
+Signal u_DS18B20Z/sub_2301_add_2_1/S1 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_1/S0 undriven or does not drive anything -
+
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_3/S1 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_3/S0 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_5/S1 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_5/S0 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_7/S1 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_7/S0 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_9/S0 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_11/S1 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_11/S0 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_13/S1 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_13/S0 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_15/S1 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_15/S0 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_17/S1 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_17/S0 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_19/S1 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_19/S0 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_21/S0 undriven or does not drive anything -
+     clipped.
+Signal u_DS18B20Z/sub_2301_add_2_21/CO undriven or does not drive anything -
+     clipped.
+Signal u_uart_send/clk_cnt_3015_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal u_uart_send/clk_cnt_3015_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal u_uart_send/clk_cnt_3015_add_4_17/S1 undriven or does not drive anything
+     - clipped.
+Signal u_uart_send/clk_cnt_3015_add_4_17/CO undriven or does not drive anything
+     - clipped.
+Signal devide_1s/add_24018_2/S1 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_2/S0 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_2/CI undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_4/S1 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_4/S0 undriven or does not drive anything - clipped.
+
+Signal devide_1s/add_24018_6/S1 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_6/S0 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_8/S1 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_8/S0 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_10/S1 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_10/S0 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_12/S1 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_12/S0 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_14/S1 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_14/S0 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_16/S1 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_16/S0 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_18/S1 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_18/S0 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_20/S1 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_20/S0 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_22/S1 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_22/S0 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_24/S1 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_24/S0 undriven or does not drive anything - clipped.
+Signal devide_1s/add_24018_cout/S1 undriven or does not drive anything -
+     clipped.
+Signal devide_1s/add_24018_cout/CO undriven or does not drive anything -
+     clipped.
+Signal devide_1s/cnt_p_3009_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal devide_1s/cnt_p_3009_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal devide_1s/cnt_p_3009_add_4_33/S1 undriven or does not drive anything -
+     clipped.
+Signal devide_1s/cnt_p_3009_add_4_33/CO undriven or does not drive anything -
+     clipped.
+Signal equal_3006_11/S1 undriven or does not drive anything - clipped.
+Signal equal_3006_11/S0 undriven or does not drive anything - clipped.
+Signal key_1/cnt_3010_add_4_19/S1 undriven or does not drive anything - clipped.
+     
+Signal key_1/cnt_3010_add_4_19/CO undriven or does not drive anything - clipped.
+     
+Signal key_1/cnt_3010_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal key_1/cnt_3010_add_4_1/CI undriven or does not drive anything - clipped.
+Signal equal_3006_13/S1 undriven or does not drive anything - clipped.
+Signal equal_3006_13/S0 undriven or does not drive anything - clipped.
+Signal add_1757_1/S1 undriven or does not drive anything - clipped.
+Signal add_1757_1/S0 undriven or does not drive anything - clipped.
+Signal add_1757_1/CI undriven or does not drive anything - clipped.
+Signal add_1757_9/CO undriven or does not drive anything - clipped.
+Signal u_uart_recv/clk_cnt_3017_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal u_uart_recv/clk_cnt_3017_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal u_uart_recv/clk_cnt_3017_add_4_17/S1 undriven or does not drive anything
+     - clipped.
+Signal u_uart_recv/clk_cnt_3017_add_4_17/CO undriven or does not drive anything
+     - clipped.
+Signal key_2/cnt_3011_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal key_2/cnt_3011_add_4_1/CI undriven or does not drive anything - clipped.
+
+Signal key_2/cnt_3011_add_4_19/S1 undriven or does not drive anything - clipped.
+     
+Signal key_2/cnt_3011_add_4_19/CO undriven or does not drive anything - clipped.
+     
+Signal add_1730_1/S1 undriven or does not drive anything - clipped.
+Signal add_1730_1/S0 undriven or does not drive anything - clipped.
+Signal add_1730_1/CI undriven or does not drive anything - clipped.
+Signal equal_3006_15/S1 undriven or does not drive anything - clipped.
+Signal equal_3006_15/S0 undriven or does not drive anything - clipped.
+Signal add_1730_9/CO undriven or does not drive anything - clipped.
+Signal equal_3006_16/S0 undriven or does not drive anything - clipped.
+Signal equal_3006_16/CO undriven or does not drive anything - clipped.
+Signal m_music_play/add_114_1/S0 undriven or does not drive anything - clipped.
+Signal m_music_play/add_114_1/CI undriven or does not drive anything - clipped.
+Signal m_music_play/add_114_9/S1 undriven or does not drive anything - clipped.
+Signal m_music_play/add_114_9/CO undriven or does not drive anything - clipped.
+Signal m_music_play/sub_2303_add_2_2/S1 undriven or does not drive anything -
+     clipped.
+Signal m_music_play/sub_2303_add_2_2/S0 undriven or does not drive anything -
+     clipped.
+Signal m_music_play/sub_2303_add_2_2/CI undriven or does not drive anything -
+     clipped.
+Signal m_music_play/sub_2303_add_2_4/S1 undriven or does not drive anything -
+     clipped.
+Signal m_music_play/sub_2303_add_2_4/S0 undriven or does not drive anything -
+     clipped.
+Signal m_music_play/sub_2303_add_2_6/S1 undriven or does not drive anything -
+     clipped.
+Signal m_music_play/sub_2303_add_2_6/S0 undriven or does not drive anything -
+     clipped.
+Signal m_music_play/sub_2303_add_2_8/S1 undriven or does not drive anything -
+     clipped.
+Signal m_music_play/sub_2303_add_2_8/S0 undriven or does not drive anything -
+     clipped.
+Signal m_music_play/sub_2303_add_2_10/S1 undriven or does not drive anything -
+     clipped.
+Signal m_music_play/sub_2303_add_2_10/S0 undriven or does not drive anything -
+     clipped.
+Signal m_music_play/music_cnt_3019_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal m_music_play/music_cnt_3019_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal m_music_play/sub_2303_add_2_12/S1 undriven or does not drive anything -
+     clipped.
+Signal m_music_play/sub_2303_add_2_12/S0 undriven or does not drive anything -
+     clipped.
+Signal m_music_play/sub_2303_add_2_14/S0 undriven or does not drive anything -
+     clipped.
+Signal m_music_play/sub_2303_add_2_14/CO undriven or does not drive anything -
+     clipped.
+Signal m_music_play/music_cnt_3019_add_4_9/CO undriven or does not drive
+     anything - clipped.
+Signal m_music_play/cnt_delay_3020_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal m_music_play/cnt_delay_3020_add_4_1/CI undriven or does not drive
+     anything - clipped.
+
+Signal m_music_play/cnt_delay_3020_add_4_17/S1 undriven or does not drive
+     anything - clipped.
+Signal m_music_play/cnt_delay_3020_add_4_17/CO undriven or does not drive
+     anything - clipped.
+Signal m_music_play/clk_cnt_3021_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal m_music_play/clk_cnt_3021_add_4_1/CI undriven or does not drive anything
+     - clipped.
+Signal m_music_play/clk_cnt_3021_add_4_17/S1 undriven or does not drive anything
+     - clipped.
+Signal m_music_play/clk_cnt_3021_add_4_17/CO undriven or does not drive anything
+     - clipped.
+Signal add_1739_9/CO undriven or does not drive anything - clipped.
+Signal equal_3006_0/S1 undriven or does not drive anything - clipped.
+Signal equal_3006_0/S0 undriven or does not drive anything - clipped.
+Signal equal_3006_0/CI undriven or does not drive anything - clipped.
+Signal add_118_1/S0 undriven or does not drive anything - clipped.
+Signal add_118_1/CI undriven or does not drive anything - clipped.
+Signal add_118_9/S1 undriven or does not drive anything - clipped.
+Signal add_118_9/CO undriven or does not drive anything - clipped.
+Signal add_132_1/S0 undriven or does not drive anything - clipped.
+Signal add_132_1/CI undriven or does not drive anything - clipped.
+Signal add_1748_9/CO undriven or does not drive anything - clipped.
+Signal add_1748_1/S1 undriven or does not drive anything - clipped.
+Signal add_1748_1/S0 undriven or does not drive anything - clipped.
+Signal add_1748_1/CI undriven or does not drive anything - clipped.
+Signal add_132_9/S1 undriven or does not drive anything - clipped.
+Signal add_132_9/CO undriven or does not drive anything - clipped.
+Signal add_133_1/S0 undriven or does not drive anything - clipped.
+Signal add_133_1/CI undriven or does not drive anything - clipped.
+Signal add_133_9/S1 undriven or does not drive anything - clipped.
+Signal add_133_9/CO undriven or does not drive anything - clipped.
+Signal add_1721_1/S1 undriven or does not drive anything - clipped.
+Signal add_1721_1/S0 undriven or does not drive anything - clipped.
+Signal add_1721_1/CI undriven or does not drive anything - clipped.
+Signal add_1739_1/S1 undriven or does not drive anything - clipped.
+Signal add_1739_1/S0 undriven or does not drive anything - clipped.
+Signal add_1739_1/CI undriven or does not drive anything - clipped.
+Signal add_1721_9/CO undriven or does not drive anything - clipped.
+Block oled1/divide_1Hz/rst_n_in_I_0_1_lut was optimized away.
+Block oled1/cnt_write_4__bdd_1_lut_1_lut was optimized away.
+Block u_DS18B20Z/i5047_1_lut was optimized away.
+Block u_uart_send/i12854_1_lut_rep_603 was optimized away.
+Block i3264_1_lut was optimized away.
+Block u_uart_recv/i3289_1_lut was optimized away.
+Block u_uart_recv/i12891_1_lut was optimized away.
+Block i1 was optimized away.
+
+     
+
+
+
+<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'sys_rst_n_c'.
+
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'sys_rst_n_c' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 125 
+
+     Type and instance name of component: 
+   Register : uart_send_data_i0_i0
+   Register : hour_warning__i0
+   Register : min_warning__i0
+   Register : hour_t_i0_i0
+   Register : sec_t_i0_i4
+   Register : sec_t_i0_i5
+   Register : sec_t_i0_i6
+   Register : sec_t_i0_i7
+   Register : uart_send_data_i0_i4
+   Register : uart_send_data_i0_i1
+   Register : uart_send_data_i0_i2
+   Register : uart_send_data_i0_i3
+   Register : uart_send_data_i0_i5
+   Register : uart_send_data_i0_i6
+   Register : warning_173
+   Register : min_t_i0_i0
+   Register : sec_t_i0_i3
+   Register : sec_t_i0_i2
+   Register : sec_t_i0_i1
+   Register : hour_t_i0_i7
+   Register : hour_t_i0_i6
+   Register : hour_t_i0_i5
+   Register : hour_t_i0_i4
+   Register : hour_t_i0_i3
+   Register : hour_t_i0_i2
+   Register : hour_t_i0_i1
+   Register : min_warning__i7
+   Register : min_warning__i6
+   Register : min_warning__i5
+   Register : min_warning__i4
+   Register : min_warning__i3
+   Register : min_warning__i2
+   Register : min_warning__i1
+   Register : hour_warning__i7
+   Register : hour_warning__i6
+   Register : hour_warning__i5
+   Register : hour_warning__i4
+   Register : hour_warning__i3
+
+   Register : hour_warning__i2
+   Register : hour_warning__i1
+   Register : min_t_i0_i1
+   Register : min_t_i0_i2
+   Register : min_t_i0_i3
+   Register : min_t_i0_i4
+   Register : min_t_i0_i5
+   Register : min_t_i0_i6
+   Register : min_t_i0_i7
+   Register : m_music_play/clk_cnt_3021__i4
+   Register : m_music_play/clk_cnt_3021__i3
+   Register : m_music_play/clk_cnt_3021__i2
+   Register : m_music_play/music_tone__i1
+   Register : m_music_play/state_back_i0_i0
+   Register : m_music_play/clk_cnt_3021__i1
+   Register : m_music_play/cnt_delay_3020__i15
+   Register : m_music_play/cnt_delay_3020__i14
+   Register : m_music_play/cnt_delay_3020__i13
+   Register : m_music_play/cnt_delay_3020__i12
+   Register : m_music_play/cnt_delay_3020__i11
+   Register : m_music_play/cnt_delay_3020__i10
+   Register : m_music_play/music_tone__i5
+   Register : m_music_play/music_tone__i4
+   Register : m_music_play/music_tone__i3
+   Register : m_music_play/music_tone__i2
+   Register : m_music_play/clk_cnt_3021__i15
+   Register : m_music_play/clk_cnt_3021__i14
+   Register : m_music_play/clk_cnt_3021__i13
+   Register : m_music_play/clk_cnt_3021__i12
+   Register : m_music_play/clk_cnt_3021__i11
+   Register : m_music_play/cnt_delay_3020__i9
+   Register : m_music_play/cnt_delay_3020__i8
+   Register : m_music_play/cnt_delay_3020__i7
+   Register : m_music_play/clk_cnt_3021__i10
+   Register : m_music_play/clk_cnt_3021__i9
+   Register : m_music_play/clk_cnt_3021__i8
+   Register : m_music_play/clk_cnt_3021__i7
+   Register : m_music_play/clk_cnt_3021__i6
+   Register : m_music_play/clk_cnt_3021__i5
+   Register : m_music_play/cnt_delay_3020__i6
+   Register : m_music_play/cnt_delay_3020__i5
+   Register : m_music_play/cnt_delay_3020__i4
+   Register : m_music_play/cnt_delay_3020__i3
+   Register : m_music_play/cnt_delay_3020__i2
+   Register : m_music_play/cnt_delay_3020__i1
+   Register : m_music_play/music_cnt_3019__i8
+   Register : m_music_play/music_cnt_3019__i7
+   Register : m_music_play/music_cnt_3019__i6
+   Register : m_music_play/music_cnt_3019__i5
+   Register : m_music_play/clk_cnt_3021__i0
+   Register : m_music_play/cnt_delay_3020__i0
+   Register : m_music_play/music_cnt_3019__i0
+   Register : m_music_play/music_cnt_3019__i4
+   Register : m_music_play/music_cnt_3019__i3
+   Register : m_music_play/music_cnt_3019__i2
+   Register : m_music_play/music_cnt_3019__i1
+
+   Register : sec_t_i0_i0
+   Register : u_DS18B20Z/data_wr_i0_i7
+   Register : u_DS18B20Z/data_wr_i0_i6
+   Register : u_DS18B20Z/data_wr_i0_i1
+   Register : u_DS18B20Z/data_out_i0_i10
+   Register : u_DS18B20Z/data_out_i0_i9
+   Register : u_DS18B20Z/data_out_i0_i8
+   Register : u_DS18B20Z/data_out_i0_i7
+   Register : u_DS18B20Z/data_out_i0_i6
+   Register : u_DS18B20Z/data_out_i0_i5
+   Register : u_DS18B20Z/data_out_i0_i4
+   Register : u_DS18B20Z/data_wr_buffer_i0_i7
+   Register : u_DS18B20Z/data_wr_buffer_i0_i6
+   Register : u_DS18B20Z/data_wr_buffer_i0_i4
+   Register : u_DS18B20Z/num_delay_i0_i12
+   Register : u_DS18B20Z/num_delay_i0_i8
+   Register : u_DS18B20Z/num_delay_i0_i5
+   Register : u_DS18B20Z/num_delay_i0_i1
+   Register : u_DS18B20Z/num_delay_i0_i2
+   Register : u_DS18B20Z/num_delay_i0_i3
+   Register : u_DS18B20Z/num_delay_i0_i4
+   Register : u_DS18B20Z/num_delay_i0_i6
+   Register : u_DS18B20Z/temperature_buffer_i0_i0
+   Register : u_DS18B20Z/temperature_buffer_i0_i1
+   Register : u_DS18B20Z/temperature_buffer_i0_i2
+   Register : u_DS18B20Z/temperature_buffer_i0_i4
+   Register : u_DS18B20Z/temperature_buffer_i0_i5
+   Register : u_DS18B20Z/temperature_buffer_i0_i6
+   Register : u_DS18B20Z/temperature_buffer_i0_i7
+   Register : u_DS18B20Z/num_delay_i0_i0
+   Register : oled1/flash_bit_319
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'sys_rst_n_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 348 
+
+     Type and instance name of component: 
+   Register : warning_time__i0
+   Register : warning_time__i7
+   Register : warning_time__i6
+   Register : warning_time__i5
+   Register : warning_time__i4
+   Register : warning_time__i3
+   Register : warning_time__i2
+   Register : warning_time__i1
+   Register : key_mode_3008__i2
+   Register : key_mode_3008__i1
+   Register : hour_i1
+   Register : hour_i2
+
+   Register : hour_i3
+   Register : hour_i4
+   Register : hour_i5
+   Register : hour_i6
+   Register : hour_i7
+   Register : key_mode_3008__i0
+   Register : key_2/cnt_3011__i0
+   Register : key_2/cnt_3011__i17
+   Register : key_2/cnt_3011__i16
+   Register : key_2/cnt_3011__i15
+   Register : key_2/cnt_3011__i14
+   Register : key_2/cnt_3011__i13
+   Register : key_2/cnt_3011__i12
+   Register : key_2/cnt_3011__i11
+   Register : key_2/cnt_3011__i10
+   Register : key_2/cnt_3011__i9
+   Register : key_2/cnt_3011__i8
+   Register : key_2/cnt_3011__i7
+   Register : key_2/cnt_3011__i6
+   Register : key_2/cnt_3011__i5
+   Register : key_2/cnt_3011__i4
+   Register : key_2/cnt_3011__i3
+   Register : key_2/cnt_3011__i2
+   Register : key_2/cnt_3011__i1
+   Register : u_uart_recv/rxdata__i0
+   Register : u_uart_recv/rx_cnt_FSM_i9
+   Register : u_uart_recv/rx_cnt_FSM_i0
+   Register : u_uart_recv/rxdata__i1
+   Register : u_uart_recv/rxdata__i2
+   Register : u_uart_recv/rxdata__i3
+   Register : u_uart_recv/rxdata__i5
+   Register : u_uart_recv/rxdata__i6
+   Register : u_uart_recv/rxdata__i7
+   Register : u_uart_recv/rxdata__i4
+   Register : u_uart_recv/rx_cnt_FSM_i8
+   Register : u_uart_recv/rx_cnt_FSM_i7
+   Register : u_uart_recv/rx_cnt_FSM_i6
+   Register : u_uart_recv/rx_cnt_FSM_i5
+   Register : u_uart_recv/rx_cnt_FSM_i4
+   Register : u_uart_recv/rx_cnt_FSM_i3
+   Register : u_uart_recv/rx_cnt_FSM_i2
+   Register : u_uart_recv/rx_cnt_FSM_i1
+   Register : u_uart_recv/uart_data__i7
+   Register : u_uart_recv/uart_data__i6
+   Register : u_uart_recv/uart_data__i5
+   Register : u_uart_recv/uart_data__i4
+   Register : u_uart_recv/uart_data__i3
+   Register : u_uart_recv/uart_data__i2
+   Register : u_uart_recv/uart_data__i1
+   Register : u_uart_recv/rx_cnt_FSM_i15
+   Register : u_uart_recv/rx_cnt_FSM_i14
+   Register : u_uart_recv/rx_cnt_FSM_i13
+   Register : u_uart_recv/rx_cnt_FSM_i12
+   Register : u_uart_recv/rx_cnt_FSM_i11
+   Register : u_uart_recv/rx_cnt_FSM_i10
+   Register : u_uart_recv/clk_cnt_3017__i1
+
+   Register : u_uart_recv/clk_cnt_3017__i2
+   Register : u_uart_recv/clk_cnt_3017__i3
+   Register : u_uart_recv/clk_cnt_3017__i4
+   Register : u_uart_recv/clk_cnt_3017__i5
+   Register : u_uart_recv/clk_cnt_3017__i6
+   Register : u_uart_recv/clk_cnt_3017__i7
+   Register : u_uart_recv/clk_cnt_3017__i8
+   Register : u_uart_recv/clk_cnt_3017__i9
+   Register : u_uart_recv/clk_cnt_3017__i10
+   Register : u_uart_recv/clk_cnt_3017__i11
+   Register : u_uart_recv/clk_cnt_3017__i12
+   Register : u_uart_recv/clk_cnt_3017__i13
+   Register : u_uart_recv/clk_cnt_3017__i14
+   Register : u_uart_recv/clk_cnt_3017__i15
+   Register : u_uart_recv/clk_cnt_3017__i0
+   Register : u_uart_recv/uart_data__i0
+   Register : key_1/cnt_3010__i0
+   Register : key_1/cnt_3010__i17
+   Register : key_1/cnt_3010__i16
+   Register : key_1/cnt_3010__i15
+   Register : key_1/cnt_3010__i14
+   Register : key_1/cnt_3010__i13
+   Register : key_1/cnt_3010__i12
+   Register : key_1/cnt_3010__i11
+   Register : key_1/cnt_3010__i10
+   Register : key_1/cnt_3010__i9
+   Register : key_1/cnt_3010__i8
+   Register : key_1/cnt_3010__i7
+   Register : key_1/cnt_3010__i6
+   Register : key_1/cnt_3010__i5
+   Register : key_1/cnt_3010__i4
+   Register : key_1/cnt_3010__i3
+   Register : key_1/cnt_3010__i2
+   Register : key_1/cnt_3010__i1
+   Register : devide_1s/cnt_p_3009__i31
+   Register : devide_1s/cnt_p_3009__i30
+   Register : devide_1s/cnt_p_3009__i29
+   Register : devide_1s/cnt_p_3009__i28
+   Register : devide_1s/cnt_p_3009__i27
+   Register : devide_1s/cnt_p_3009__i26
+   Register : devide_1s/cnt_p_3009__i25
+   Register : devide_1s/cnt_p_3009__i24
+   Register : devide_1s/cnt_p_3009__i23
+   Register : devide_1s/cnt_p_3009__i22
+   Register : devide_1s/cnt_p_3009__i21
+   Register : devide_1s/cnt_p_3009__i20
+   Register : devide_1s/cnt_p_3009__i19
+   Register : devide_1s/cnt_p_3009__i18
+   Register : devide_1s/cnt_p_3009__i17
+   Register : devide_1s/cnt_p_3009__i16
+   Register : devide_1s/cnt_p_3009__i15
+   Register : devide_1s/cnt_p_3009__i14
+   Register : devide_1s/cnt_p_3009__i13
+   Register : devide_1s/cnt_p_3009__i12
+   Register : devide_1s/cnt_p_3009__i11
+   Register : devide_1s/cnt_p_3009__i10
+
+   Register : devide_1s/cnt_p_3009__i9
+   Register : devide_1s/cnt_p_3009__i8
+   Register : devide_1s/cnt_p_3009__i7
+   Register : devide_1s/cnt_p_3009__i6
+   Register : devide_1s/cnt_p_3009__i5
+   Register : devide_1s/cnt_p_3009__i4
+   Register : devide_1s/cnt_p_3009__i3
+   Register : devide_1s/cnt_p_3009__i2
+   Register : devide_1s/cnt_p_3009__i1
+   Register : devide_1s/cnt_p_3009__i0
+   Register : u_uart_send/tx_data_i3
+   Register : u_uart_send/tx_data_i4
+   Register : u_uart_send/tx_data_i5
+   Register : u_uart_send/tx_data_i6
+   Register : u_uart_send/tx_cnt_FSM_i0
+   Register : u_uart_send/tx_cnt_FSM_i15
+   Register : u_uart_send/tx_cnt_FSM_i14
+   Register : u_uart_send/tx_cnt_FSM_i13
+   Register : u_uart_send/tx_cnt_FSM_i12
+   Register : u_uart_send/tx_cnt_FSM_i11
+   Register : u_uart_send/tx_cnt_FSM_i10
+   Register : u_uart_send/tx_cnt_FSM_i9
+   Register : u_uart_send/tx_cnt_FSM_i8
+   Register : u_uart_send/tx_cnt_FSM_i7
+   Register : u_uart_send/tx_cnt_FSM_i6
+   Register : u_uart_send/tx_cnt_FSM_i5
+   Register : u_uart_send/tx_cnt_FSM_i4
+   Register : u_uart_send/tx_cnt_FSM_i3
+   Register : u_uart_send/tx_cnt_FSM_i2
+   Register : u_uart_send/tx_cnt_FSM_i1
+   Register : u_uart_send/clk_cnt_3015__i1
+   Register : u_uart_send/clk_cnt_3015__i2
+   Register : u_uart_send/clk_cnt_3015__i3
+   Register : u_uart_send/clk_cnt_3015__i4
+   Register : u_uart_send/clk_cnt_3015__i5
+   Register : u_uart_send/clk_cnt_3015__i6
+   Register : u_uart_send/clk_cnt_3015__i7
+   Register : u_uart_send/clk_cnt_3015__i8
+   Register : u_uart_send/clk_cnt_3015__i9
+   Register : u_uart_send/clk_cnt_3015__i10
+   Register : u_uart_send/clk_cnt_3015__i11
+   Register : u_uart_send/clk_cnt_3015__i12
+   Register : u_uart_send/clk_cnt_3015__i13
+   Register : u_uart_send/clk_cnt_3015__i14
+   Register : u_uart_send/clk_cnt_3015__i15
+   Register : u_uart_send/uart_txd_47
+   Register : u_uart_send/clk_cnt_3015__i0
+   Register : u_uart_send/tx_data_i0
+   Register : u_uart_send/tx_data_i1
+   Register : u_uart_send/tx_data_i2
+   Register : u_DS18B20Z/cnt_1mhz_3013__i0
+   Register : u_DS18B20Z/cnt_main_i0_i1
+   Register : u_DS18B20Z/cnt_main_i0_i2
+   Register : u_DS18B20Z/cnt_main_i0_i3
+   Register : u_DS18B20Z/cnt_read_i0_i1
+   Register : u_DS18B20Z/cnt_read_i0_i2
+
+   Register : u_DS18B20Z/cnt_read_i0_i3
+   Register : u_DS18B20Z/cnt_read_i0_i4
+   Register : u_DS18B20Z/cnt_read_i0_i5
+   Register : u_DS18B20Z/cnt_delay_i0_i1
+   Register : u_DS18B20Z/cnt_delay_i0_i2
+   Register : u_DS18B20Z/cnt_delay_i0_i3
+   Register : u_DS18B20Z/cnt_delay_i0_i4
+   Register : u_DS18B20Z/cnt_1mhz_3013__i1
+   Register : u_DS18B20Z/cnt_1mhz_3013__i2
+   Register : u_DS18B20Z/cnt_delay_i0_i5
+   Register : u_DS18B20Z/cnt_delay_i0_i6
+   Register : u_DS18B20Z/cnt_delay_i0_i7
+   Register : u_DS18B20Z/cnt_read_i0_i0
+   Register : u_DS18B20Z/cnt_delay_i0_i8
+   Register : u_DS18B20Z/cnt_delay_i0_i9
+   Register : u_DS18B20Z/cnt_delay_i0_i10
+   Register : u_DS18B20Z/cnt_delay_i0_i11
+   Register : u_DS18B20Z/cnt_delay_i0_i12
+   Register : u_DS18B20Z/cnt_delay_i0_i13
+   Register : u_DS18B20Z/cnt_delay_i0_i14
+   Register : u_DS18B20Z/cnt_delay_i0_i15
+   Register : u_DS18B20Z/cnt_delay_i0_i16
+   Register : u_DS18B20Z/cnt_delay_i0_i17
+   Register : u_DS18B20Z/cnt_delay_i0_i18
+   Register : u_DS18B20Z/cnt_delay_i0_i19
+   Register : u_DS18B20Z/cnt_main_i0_i0
+   Register : u_DS18B20Z/cnt_write_i0_i1
+   Register : u_DS18B20Z/cnt_write_i0_i2
+   Register : u_DS18B20Z/cnt_write_i0_i3
+   Register : u_DS18B20Z/cnt_write_i0_i4
+   Register : u_DS18B20Z/cnt_write_i0_i5
+   Register : u_DS18B20Z/cnt_init_i0_i1
+   Register : u_DS18B20Z/cnt_init_i0_i2
+   Register : u_DS18B20Z/cnt_init_i0_i0
+   Register : u_DS18B20Z/cnt_write_i0_i0
+   Register : m_beep/time_cnt_3018__i0
+   Register : m_beep/time_cnt_3018__i1
+   Register : m_beep/time_cnt_3018__i2
+   Register : m_beep/time_cnt_3018__i3
+   Register : m_beep/time_cnt_3018__i4
+   Register : m_beep/time_cnt_3018__i5
+   Register : m_beep/time_cnt_3018__i6
+   Register : m_beep/time_cnt_3018__i7
+   Register : m_beep/time_cnt_3018__i8
+   Register : m_beep/time_cnt_3018__i9
+   Register : m_beep/time_cnt_3018__i10
+   Register : m_beep/time_cnt_3018__i11
+   Register : m_beep/time_cnt_3018__i12
+   Register : m_beep/time_cnt_3018__i13
+   Register : m_beep/time_cnt_3018__i14
+   Register : m_beep/time_cnt_3018__i15
+   Register : m_beep/time_cnt_3018__i16
+   Register : m_beep/time_cnt_3018__i17
+   Register : oled1/char_i0_i1
+   Register : oled1/char_i0_i2
+   Register : oled1/char_i0_i3
+
+   Register : oled1/char_i0_i5
+   Register : oled1/cnt_delay_i0_i5
+   Register : oled1/cnt_scan_i0_i1
+   Register : oled1/cnt_delay_i0_i6
+   Register : oled1/cnt_delay_i0_i7
+   Register : oled1/cnt_delay_i0_i8
+   Register : oled1/cnt_delay_i0_i9
+   Register : oled1/cnt_delay_i0_i10
+   Register : oled1/cnt_delay_i0_i11
+   Register : oled1/cnt_main_i0_i0
+   Register : oled1/cnt_delay_i0_i12
+   Register : oled1/state_i0_i5
+   Register : oled1/state_i0_i4
+   Register : oled1/cnt_delay_i0_i13
+   Register : oled1/state_i0_i3
+   Register : oled1/cnt_delay_i0_i14
+   Register : oled1/state_i0_i2
+   Register : oled1/cnt_i0_i15
+   Register : oled1/cnt_i0_i14
+   Register : oled1/cnt_i0_i13
+   Register : oled1/cnt_i0_i12
+   Register : oled1/cnt_delay_i0_i15
+   Register : oled1/cnt_i0_i11
+   Register : oled1/cnt_scan_i0_i2
+   Register : oled1/cnt_i0_i10
+   Register : oled1/cnt_i0_i9
+   Register : oled1/cnt_i0_i8
+   Register : oled1/cnt_i0_i7
+   Register : oled1/cnt_i0_i6
+   Register : oled1/cnt_i0_i5
+   Register : oled1/cnt_scan_i0_i3
+   Register : oled1/cnt_i0_i4
+   Register : oled1/cnt_i0_i3
+   Register : oled1/cnt_i0_i2
+   Register : oled1/cnt_i0_i1
+   Register : oled1/num_3023__i7
+   Register : oled1/num_3023__i6
+   Register : oled1/num_3023__i5
+   Register : oled1/num_3023__i4
+   Register : oled1/num_3023__i3
+   Register : oled1/num_3023__i1
+   Register : oled1/cnt_write_i0_i1
+   Register : oled1/cnt_write_i0_i2
+   Register : oled1/cnt_write_i0_i3
+   Register : oled1/cnt_write_i0_i4
+   Register : oled1/cnt_delay_i0_i1
+   Register : oled1/cnt_delay_i0_i2
+   Register : oled1/cnt_delay_i0_i3
+   Register : oled1/cnt_delay_i0_i4
+   Register : oled1/cnt_delay_i0_i0
+   Register : oled1/cnt_write_i0_i0
+   Register : oled1/cnt_i0_i0
+   Register : oled1/char_i0_i0
+   Register : oled1/cnt_main_i0_i1
+   Register : oled1/cnt_main_i0_i2
+   Register : oled1/cnt_scan_i0_i0
+
+   Register : oled1/cnt_main_i0_i3
+   Register : oled1/cnt_main_i0_i4
+   Register : oled1/cnt_init_i0_i1
+   Register : oled1/cnt_init_i0_i2
+   Register : oled1/cnt_init_i0_i3
+   Register : oled1/cnt_init_i0_i4
+   Register : oled1/divide_1Hz/cnt_p_3022__i1
+   Register : oled1/divide_1Hz/cnt_p_3022__i2
+   Register : oled1/divide_1Hz/cnt_p_3022__i3
+   Register : oled1/divide_1Hz/cnt_p_3022__i4
+   Register : oled1/divide_1Hz/cnt_p_3022__i5
+   Register : oled1/divide_1Hz/cnt_p_3022__i6
+   Register : oled1/divide_1Hz/cnt_p_3022__i7
+   Register : oled1/divide_1Hz/cnt_p_3022__i8
+   Register : oled1/divide_1Hz/cnt_p_3022__i9
+   Register : oled1/divide_1Hz/cnt_p_3022__i10
+   Register : oled1/divide_1Hz/cnt_p_3022__i11
+   Register : oled1/divide_1Hz/cnt_p_3022__i12
+   Register : oled1/divide_1Hz/cnt_p_3022__i13
+   Register : oled1/divide_1Hz/cnt_p_3022__i14
+   Register : oled1/divide_1Hz/cnt_p_3022__i15
+   Register : oled1/divide_1Hz/cnt_p_3022__i16
+   Register : oled1/divide_1Hz/cnt_p_3022__i17
+   Register : oled1/divide_1Hz/cnt_p_3022__i18
+   Register : oled1/divide_1Hz/cnt_p_3022__i19
+   Register : oled1/divide_1Hz/cnt_p_3022__i20
+   Register : oled1/divide_1Hz/cnt_p_3022__i21
+   Register : oled1/divide_1Hz/cnt_p_3022__i22
+   Register : oled1/divide_1Hz/cnt_p_3022__i23
+   Register : oled1/divide_1Hz/cnt_p_3022__i24
+   Register : oled1/divide_1Hz/cnt_p_3022__i25
+   Register : oled1/divide_1Hz/cnt_p_3022__i26
+   Register : oled1/divide_1Hz/cnt_p_3022__i27
+   Register : oled1/divide_1Hz/cnt_p_3022__i28
+   Register : oled1/divide_1Hz/cnt_p_3022__i29
+   Register : oled1/divide_1Hz/cnt_p_3022__i30
+   Register : oled1/divide_1Hz/cnt_p_3022__i31
+   Register : oled1/divide_1Hz/cnt_p_3022__i0
+   Register : key_3/cnt_3012__i0
+   Register : key_3/cnt_3012__i17
+   Register : key_3/cnt_3012__i16
+   Register : key_3/cnt_3012__i15
+   Register : key_3/cnt_3012__i14
+   Register : key_3/cnt_3012__i13
+   Register : key_3/cnt_3012__i12
+   Register : key_3/cnt_3012__i11
+   Register : key_3/cnt_3012__i10
+   Register : key_3/cnt_3012__i9
+   Register : key_3/cnt_3012__i8
+   Register : key_3/cnt_3012__i7
+   Register : key_3/cnt_3012__i6
+   Register : key_3/cnt_3012__i5
+   Register : key_3/cnt_3012__i4
+   Register : key_3/cnt_3012__i3
+   Register : key_3/cnt_3012__i2
+   Register : key_3/cnt_3012__i1
+
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 1 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 64 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

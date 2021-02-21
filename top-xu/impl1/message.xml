@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Map">
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>D:/new porject/top-xu/top.lpf(17): Semantic error in &quot;LOCATE COMP &quot;sw3&quot; SITE &quot;M9&quot; ;&quot;: </Dynamic>
+            <Dynamic>sw3</Dynamic>
+            <Navigation>D:/new porject/top-xu/top.lpf</Navigation>
+            <Navigation>17</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>sw4</Dynamic>
+        </Message>
+        <Message>
+            <ID>51001046</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>sw4</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901875</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/top.v(344): </Dynamic>
+            <Dynamic>uart_en</Dynamic>
+            <Navigation>d:/new porject/top-xu/top.v</Navigation>
+            <Navigation>344</Navigation>
+        </Message>
+        <Message>
+            <ID>35901875</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/top.v(356): </Dynamic>
+            <Dynamic>uart_en</Dynamic>
+            <Navigation>d:/new porject/top-xu/top.v</Navigation>
+            <Navigation>356</Navigation>
+        </Message>
+        <Message>
+            <ID>35901875</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/top.v(357): </Dynamic>
+            <Dynamic>uart_send_data</Dynamic>
+            <Navigation>d:/new porject/top-xu/top.v</Navigation>
+            <Navigation>357</Navigation>
+        </Message>
+        <Message>
+            <ID>35901875</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/top.v(360): </Dynamic>
+            <Dynamic>uart_en</Dynamic>
+            <Navigation>d:/new porject/top-xu/top.v</Navigation>
+            <Navigation>360</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/new porject/top-xu/top.v(1): </Dynamic>
+            <Dynamic>top</Dynamic>
+            <Navigation>d:/new porject/top-xu/top.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/new porject/top-xu/clock.v(1): </Dynamic>
+            <Dynamic>divide(WIDTH=32,N=12000000)</Dynamic>
+            <Navigation>d:/new porject/top-xu/clock.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/new porject/top-xu/key.v(1): </Dynamic>
+            <Dynamic>KEY</Dynamic>
+            <Navigation>d:/new porject/top-xu/key.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/new porject/top-xu/bcd.v(1): </Dynamic>
+            <Dynamic>BCD</Dynamic>
+            <Navigation>d:/new porject/top-xu/bcd.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/bcd.v(24): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>d:/new porject/top-xu/bcd.v</Navigation>
+            <Navigation>24</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/bcd.v(22): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>d:/new porject/top-xu/bcd.v</Navigation>
+            <Navigation>22</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/new porject/top-xu/ds18b20.v(18): </Dynamic>
+            <Dynamic>DS18B20Z</Dynamic>
+            <Navigation>d:/new porject/top-xu/ds18b20.v</Navigation>
+            <Navigation>18</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/new porject/top-xu/uart.v(1): </Dynamic>
+            <Dynamic>uart_send</Dynamic>
+            <Navigation>d:/new porject/top-xu/uart.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/new porject/top-xu/oled.v(1): </Dynamic>
+            <Dynamic>OLED12832</Dynamic>
+            <Navigation>d:/new porject/top-xu/oled.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/new porject/top-xu/uart_recv.v(23): </Dynamic>
+            <Dynamic>uart_recv(CLK_FREQ=12000000,UART_BPS=115200)</Dynamic>
+            <Navigation>d:/new porject/top-xu/uart_recv.v</Navigation>
+            <Navigation>23</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/new porject/top-xu/beep.v(18): </Dynamic>
+            <Dynamic>Beeper</Dynamic>
+            <Navigation>d:/new porject/top-xu/beep.v</Navigation>
+            <Navigation>18</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/top.v(474): </Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>5</Dynamic>
+            <Dynamic>tone</Dynamic>
+            <Navigation>d:/new porject/top-xu/top.v</Navigation>
+            <Navigation>474</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>d:/new porject/top-xu/music_player.v(9): </Dynamic>
+            <Dynamic>music_play</Dynamic>
+            <Navigation>d:/new porject/top-xu/music_player.v</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/top.v(481): </Dynamic>
+            <Dynamic>clk</Dynamic>
+            <Navigation>d:/new porject/top-xu/top.v</Navigation>
+            <Navigation>481</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/top.v(482): </Dynamic>
+            <Dynamic>rst_n</Dynamic>
+            <Navigation>d:/new porject/top-xu/top.v</Navigation>
+            <Navigation>482</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/oled.v(40): </Dynamic>
+            <Dynamic>cmd_0_0</Dynamic>
+            <Navigation>d:/new porject/top-xu/oled.v</Navigation>
+            <Navigation>40</Navigation>
+        </Message>
+        <Message>
+            <ID>35935014</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/oled.v(40): </Dynamic>
+            <Dynamic>cmd_0_1</Dynamic>
+            <Navigation>d:/new porject/top-xu/oled.v</Navigation>
+            <Navigation>40</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/oled.v(41): </Dynamic>
+            <Dynamic>mem_0_0</Dynamic>
+            <Navigation>d:/new porject/top-xu/oled.v</Navigation>
+            <Navigation>41</Navigation>
+        </Message>
+        <Message>
+            <ID>35935014</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/oled.v(41): </Dynamic>
+            <Dynamic>mem_0_1</Dynamic>
+            <Navigation>d:/new porject/top-xu/oled.v</Navigation>
+            <Navigation>41</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/oled.v(41): </Dynamic>
+            <Dynamic>\i393/mem_16_0</Dynamic>
+            <Navigation>d:/new porject/top-xu/oled.v</Navigation>
+            <Navigation>41</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/music_player.v(35): </Dynamic>
+            <Dynamic>\i601/note_96_0</Dynamic>
+            <Navigation>d:/new porject/top-xu/music_player.v</Navigation>
+            <Navigation>35</Navigation>
+        </Message>
+        <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>sw4</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>0</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>1</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>2</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>3</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>4</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>5</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>6</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>7</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>8</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>9</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>10</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>11</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>12</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>13</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>14</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>15</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>16</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>17</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>18</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>19</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>20</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>21</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>22</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>23</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>24</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>25</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>26</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>27</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>28</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>29</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>30</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>31</Dynamic>
+            <Dynamic>\divide_1kHz/cnt_p</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935014</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/music_player.v(35): </Dynamic>
+            <Dynamic>\m_music_play/\i601/note_0_0</Dynamic>
+            <Navigation>d:/new porject/top-xu/music_player.v</Navigation>
+            <Navigation>35</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/music_player.v(35): </Dynamic>
+            <Dynamic>\m_music_play/\i601/note_0_1</Dynamic>
+            <Navigation>d:/new porject/top-xu/music_player.v</Navigation>
+            <Navigation>35</Navigation>
+        </Message>
+        <Message>
+            <ID>35001774</ID>
+            <Severity>Info</Severity>
+            <Dynamic>\u_uart_recv/rx_cnt</Dynamic>
+            <Dynamic>one-hot</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001774</ID>
+            <Severity>Info</Severity>
+            <Dynamic>\u_uart_send/tx_cnt</Dynamic>
+            <Dynamic>one-hot</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>1</Dynamic>
+            <Dynamic>\m_music_play/music_delay</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>2</Dynamic>
+            <Dynamic>\m_music_play/music_delay</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>3</Dynamic>
+            <Dynamic>\m_music_play/music_delay</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>4</Dynamic>
+            <Dynamic>\m_music_play/music_delay</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>5</Dynamic>
+            <Dynamic>\m_music_play/music_delay</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>6</Dynamic>
+            <Dynamic>\m_music_play/music_delay</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>7</Dynamic>
+            <Dynamic>\m_music_play/music_delay</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>8</Dynamic>
+            <Dynamic>\m_music_play/music_delay</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>9</Dynamic>
+            <Dynamic>\m_music_play/music_delay</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>10</Dynamic>
+            <Dynamic>\m_music_play/music_delay</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>11</Dynamic>
+            <Dynamic>\m_music_play/music_delay</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>12</Dynamic>
+            <Dynamic>\m_music_play/music_delay</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>13</Dynamic>
+            <Dynamic>\m_music_play/music_delay</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>14</Dynamic>
+            <Dynamic>\m_music_play/music_delay</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>15</Dynamic>
+            <Dynamic>\m_music_play/music_delay</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>sw4</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/oled.v(192): </Dynamic>
+            <Dynamic>\oled1/x_pl_i0_i0</Dynamic>
+            <Navigation>d:/new porject/top-xu/oled.v</Navigation>
+            <Navigation>192</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/top.v(365): </Dynamic>
+            <Dynamic>Temp_H_i7</Dynamic>
+            <Navigation>d:/new porject/top-xu/top.v</Navigation>
+            <Navigation>365</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/uart.v(66): </Dynamic>
+            <Dynamic>\u_uart_send/tx_data_i7</Dynamic>
+            <Navigation>d:/new porject/top-xu/uart.v</Navigation>
+            <Navigation>66</Navigation>
+        </Message>
+        <Message>
+            <ID>35935014</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/ds18b20.v(263): </Dynamic>
+            <Dynamic>\u_DS18B20Z/data_wr_i0_i2</Dynamic>
+            <Navigation>d:/new porject/top-xu/ds18b20.v</Navigation>
+            <Navigation>263</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/music_player.v(324): </Dynamic>
+            <Dynamic>\m_music_play/state__i4</Dynamic>
+            <Navigation>d:/new porject/top-xu/music_player.v</Navigation>
+            <Navigation>324</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/ds18b20.v(263): </Dynamic>
+            <Dynamic>\u_DS18B20Z/data_wr_i0_i0</Dynamic>
+            <Navigation>d:/new porject/top-xu/ds18b20.v</Navigation>
+            <Navigation>263</Navigation>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>sw4</Dynamic>
+            <Navigation>sw4</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>sw4</Dynamic>
+        </Message>
+        <Message>
+            <ID>1163101</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>2</Dynamic>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>sys_clk_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>sys_clk</Dynamic>
+            <Dynamic>C1</Dynamic>
+            <Dynamic>Primary</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=u_DS18B20Z/clk_1mhz loads=13 clock_loads=2
+   Signal=oled1/clk_in_1Hz loads=1 clock_loads=1</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=u_DS18B20Z/clk_1mhz loads=13 clock_loads=2
+   Signal=oled1/clk_in_1Hz loads=1 clock_loads=1</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>
