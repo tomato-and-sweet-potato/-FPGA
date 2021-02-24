@@ -1,10 +1,13 @@
 all messages logged in file hdlparser.log
 Analyzing Verilog file D:/lscc/diamond/3.11_x64/cae_library/synthesis/verilog/machxo2.v (VERI-1482)
 Analyzing Verilog file D:/new porject/top-xu/top.v (VERI-1482)
-WARNING - D:/new porject/top-xu/top.v(343): identifier uart_en is used before its declaration. VERI-1875
-WARNING - D:/new porject/top-xu/top.v(355): identifier uart_en is used before its declaration. VERI-1875
-WARNING - D:/new porject/top-xu/top.v(356): identifier uart_send_data is used before its declaration. VERI-1875
-WARNING - D:/new porject/top-xu/top.v(359): identifier uart_en is used before its declaration. VERI-1875
+WARNING - D:/new porject/top-xu/top.v(87): identifier TEM_high is used before its declaration. VERI-1875
+WARNING - D:/new porject/top-xu/top.v(315): identifier uart_en is used before its declaration. VERI-1875
+WARNING - D:/new porject/top-xu/top.v(327): identifier uart_en is used before its declaration. VERI-1875
+WARNING - D:/new porject/top-xu/top.v(328): identifier uart_send_data is used before its declaration. VERI-1875
+WARNING - D:/new porject/top-xu/top.v(331): identifier uart_en is used before its declaration. VERI-1875
+WARNING - D:/new porject/top-xu/top.v(332): identifier uart_send_data is used before its declaration. VERI-1875
+WARNING - D:/new porject/top-xu/top.v(336): identifier uart_en is used before its declaration. VERI-1875
 Analyzing Verilog file D:/new porject/top-xu/clock.v (VERI-1482)
 Analyzing Verilog file D:/new porject/top-xu/oled.v (VERI-1482)
 Analyzing Verilog file D:/new porject/top-xu/bcd.v (VERI-1482)

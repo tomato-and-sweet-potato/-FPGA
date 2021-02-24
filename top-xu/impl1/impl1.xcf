@@ -20,8 +20,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>D:/new porject/top-xu/impl1/top_impl1.jed</File>
-			<FileTime>02/21/21 21:10:32</FileTime>
-			<JedecChecksum>0x7A4A</JedecChecksum>
+			<FileTime>02/24/21 11:17:20</FileTime>
+			<JedecChecksum>0x443A</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>

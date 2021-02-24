@@ -18,6 +18,7 @@ module top(sys_clk, sys_rst_n, sw1,sw2,beep,uart_txd,one_wire, uart_rxd,oled_res
 	output oled_mosi;
 	output          beep;               //蜂鸣器接口
 	output  uart_txd;            //UART发送端口
+//	output	warning_TEM;
 	
 	inout	one_wire;		//单总线信号线
 	
@@ -63,24 +64,29 @@ module top(sys_clk, sys_rst_n, sw1,sw2,beep,uart_txd,one_wire, uart_rxd,oled_res
 	reg		[7 : 0]		hour_t;
 	reg		[2 : 0]		key_mode;
 	
-
 	reg		[7 : 0]		min_warning;//设定的报警时间
 	reg		[7 : 0]		hour_warning;
+	reg		[7 : 0]		min_waning_t;
+	reg		[7 : 0]		hour_waning_t;
 	
 	reg					warning;//报警标志位
 	reg					time_set;//处于设定当前时间或者是设定报警时间的标志位
 	reg		[7 : 0]		warning_time;//报警开始的时间
 	
 	always @(posedge sys_clk or negedge sys_rst_n) begin
-		if (!sys_rst_n)
-			begin
+		if (!sys_rst_n) begin
 				key_mode <= 3'd0;
-				
 				time_set <= 1'b0;
+				hour_t <= 8'd0;
+				min_t <= 8'd0;
+				sec_t <= 8'd0;
+				min_warning <= 8'd1;
+				hour_warning <= 8'd0;
+				min_waning_t <= 8'd1;
+				hour_waning_t <= 8'd0;
+				TEM_high <= 8'd33;
 			end else begin
-				if (key1_pulse)
-					begin
-						
+				if (key1_pulse) begin
 						if(sw1 == 0)//判断SW1处于走时/报警设定
 							if(key_mode <= 2) begin
 								key_mode <= key_mode + 1'b1;
@@ -97,184 +103,151 @@ module top(sys_clk, sys_rst_n, sw1,sw2,beep,uart_txd,one_wire, uart_rxd,oled_res
 									time_set <= 1'b0;
 								end
 							end
-					end
-				else if (key2_pulse) begin
-					case (key_mode)
-						3'd1: begin
-							if(sw1 == 0) begin
-								hour_t <= hour_t + 1'b1; 
-								if (hour_t >=23)
-									hour_t <= 0;
-							end else begin
-								hour_warning <= hour_warning + 1'b1; 
-								if (hour_warning >=23)
-									hour_warning <= 0;
-							end
-						end
-						3'd2: begin
-							if(sw1 == 0) begin
-								min_t <= min_t + 1'b1; 
-								if (min_t >= 59)
-									min_t <= 0;
-							end else begin
-								min_warning <= min_warning + 1'b1; 
-								if (min_warning >= 59)
-									min_warning <= 0;
-							end
-						end
-						3'd3: begin
-							if(sw1 == 0) begin
-								sec_t <= sec_t + 1'b1; 
-									if (sec_t >= 59)
-										sec_t <= 0;
-							end
-						end
-					endcase
-				end else if (key3_pulse)
-					begin
+				end else 
+					if (key2_pulse) begin//加
 						case (key_mode)
 							3'd1: begin
 								if(sw1 == 0) begin
-								hour_t <= hour_t - 1'b1; 
-								if (hour_t <= 0)
-									hour_t <= 0;
+									hour_t <= hour_t + 1'b1; 
+									if (hour_t >=23)
+										hour_t <= 0;
 								end else begin
-									hour_warning <= hour_warning - 1'b1; 
-									if (hour_warning <= 0)
+									hour_warning <= hour_warning + 1'b1; 
+									if (hour_warning >=23)
 										hour_warning <= 0;
 								end
-									
 							end
 							3'd2: begin
 								if(sw1 == 0) begin
-									min_t <= min_t - 1'b1; 
-									if (min_t <= 0)
+									min_t <= min_t + 1'b1; 
+									if (min_t >= 59)
 										min_t <= 0;
 								end else begin
-									min_warning <= min_warning - 1'b1; 
-									if (min_warning <= 0)
+									min_warning <= min_warning + 1'b1; 
+									if (min_warning >= 59)
 										min_warning <= 0;
 								end
 							end
 							3'd3: begin
 								if(sw1 == 0) begin
-								sec_t <= sec_t - 1'b1; 
-									if (sec_t <= 0)
+									sec_t <= sec_t + 1'b1; 
+									if (sec_t >= 59)
 										sec_t <= 0;
 								end
 							end
 						endcase
-					end
-				else if (!key_mode)
-					begin
-						sec_t <= sec;
-						min_t <= min;
-						hour_t <= hour;
-						
-					end
+					end else 
+						if (key3_pulse) begin//减
+							case (key_mode)
+								3'd1: begin
+									if(sw1 == 0) begin
+										hour_t <= hour_t - 1'b1; 
+										if (hour_t <= 0)
+											hour_t <= 0;
+									end else begin
+										hour_warning <= hour_warning - 1'b1; 
+										if (hour_warning <= 0)
+											hour_warning <= 0;
+									end
+								end
+								3'd2: begin
+									if(sw1 == 0) begin
+										min_t <= min_t - 1'b1; 
+										if (min_t <= 0)
+											min_t <= 0;
+									end else begin
+										min_warning <= min_warning - 1'b1; 
+										if (min_warning <= 0)
+											min_warning <= 0;
+									end
+								end
+								3'd3: begin
+									if(sw1 == 0) begin
+										sec_t <= sec_t - 1'b1; 
+										if (sec_t <= 0)
+											sec_t <= 0;
+									end
+								end
+							endcase
+						end else 
+							if (!key_mode) begin
+								sec_t <= sec;
+								min_t <= min;
+								hour_t <= hour;
+								min_waning_t <= min_warning;
+								hour_waning_t <= hour_warning;
+							end
 			end
 	end
 	
-	
-	
-	always @(posedge clk_1s or negedge sys_rst_n) begin
-		if (!sys_rst_n)
-			begin
-				warning_time <= 8'd0;
-				led <= 1'b1;
-			end else begin
-				if((min_warning == min) && (hour_warning == hour)) begin
-					if(warning_time <= 9) begin//本地音乐播放的时间
-						warning <= 1'b1;
-						led = ~led;
-						warning_time <= warning_time + 8'd1;
-					end else begin
-						warning <= 1'b0;
-						led <= 1'b1;
-					end
+	always @(posedge clk_1s or negedge sys_rst_n) begin//报警检测
+		if (!sys_rst_n) begin
+			warning_time <= 8'd0;
+			led <= 1'b1;
+			warning <= 1'b0;
+		end else begin
+			if((min_waning_t == min) && (hour_waning_t == hour)) begin//报警时刻
+				if(warning_time <= 9) begin//本地音乐播放的时间
+					warning <= 1'b1;
+					led = ~led;
+					warning_time <= warning_time + 8'd1;
 				end else begin
-					warning_time <= 8'd0;
+					warning <= 1'b0;
+					led <= 1'b1;
 				end
-				
+			end else begin
+				warning_time <= 8'd0;
 			end
+		end
 	end
 	
-	always @(posedge clk_1s or negedge sys_rst_n)//计时模块
-		begin
-			
-			if (!sys_rst_n)
-				begin
-					
-					sec <= 8'd0;
-					min <= 8'd0;
-					hour <= 8'd0;
-					
-				end
-			else 
-				begin
-					if (key_mode)
-						begin
-							sec <= sec_t;
-							min <= min_t;
-							hour <= hour_t;
+	always @(posedge clk_1s or negedge sys_rst_n) begin//计时模块
+		if (!sys_rst_n) begin
+			sec <= 8'd0;
+			min <= 8'd0;
+			hour <= 8'd0;
+		end else begin
+				if (key_mode) begin
+						sec <= sec_t;
+						min <= min_t;
+						hour <= hour_t;
+				end else begin
+					if (sec >= 59) begin
+						sec <= 1'b0;
+						min <= min + 1'b1;
+					end else
+						sec <= sec + 1'b1;
+						if (min >= 59) begin
+							min <= 1'b0;
+							hour <= 1'b1;
 						end
-					else
-						begin
-							if (sec >= 59)
-								begin
-									sec <= 1'b0;
-									min <= min + 1'b1;
-								end
-							else
-								sec <= sec + 1'b1;
-							if (min >= 59)
-								begin
-									
-									min <= 1'b0;
-									hour <= 1'b1;
-									
-								end
-							if (hour >= 23)
-								hour <= 1'b0;
-						end
+						if (hour >= 23)
+							hour <= 1'b0;
 				end
 		end
+	end
 	
 	
-	wire [7 : 0] w_sec;
-	wire [3 : 0] sec_hundres;
 	wire [3 : 0] sec_tens;
 	wire [3 : 0] sec_ones;
 	
-	wire [7 : 0] w_min;
-	wire [3 : 0] min_hundres;
 	wire [3 : 0] min_tens;
 	wire [3 : 0] min_ones;
 	
-	wire [7 : 0] w_hour;
-	wire [3 : 0] hour_hundres;
 	wire [3 : 0] hour_tens;
 	wire [3 : 0] hour_ones;
 	
-	assign w_sec = sec;
-	assign w_min = min;
-	assign w_hour = hour;
 	
-	wire [7 : 0] min_warning_bcd;
 	wire [3 : 0] min_warning_tens;
 	wire [3 : 0] min_warning_ones;
 	
-	wire [7 : 0] hour_warning_bcd;
 	wire [3 : 0] hour_warning_tens;
 	wire [3 : 0] hour_warning_ones;
 	
-
-	assign min_warning_bcd = min_warning;
-	assign hour_warning_bcd = hour_warning;
+	
 	BCD bcd_sec (
 	
-		.binary(w_sec),
-		.hundres(sec_hundres),
+		.binary(sec),
 		.tens(sec_tens),
 		.ones(sec_ones)
 	
@@ -282,8 +255,7 @@ module top(sys_clk, sys_rst_n, sw1,sw2,beep,uart_txd,one_wire, uart_rxd,oled_res
 	
 	BCD bcd_min (
 	
-		.binary(w_min),
-		.hundres(min_hundres),
+		.binary(min),
 		.tens(min_tens),
 		.ones(min_ones)
 	
@@ -291,8 +263,7 @@ module top(sys_clk, sys_rst_n, sw1,sw2,beep,uart_txd,one_wire, uart_rxd,oled_res
 	
 	BCD bcd_hour (
 	
-		.binary(w_hour),
-		.hundres(hour_hundres),
+		.binary(hour),
 		.tens(hour_tens),
 		.ones(hour_ones)
 	
@@ -300,7 +271,7 @@ module top(sys_clk, sys_rst_n, sw1,sw2,beep,uart_txd,one_wire, uart_rxd,oled_res
 	
 		BCD bcd_hour_warning (
 	
-		.binary(hour_warning_bcd),
+		.binary(hour_warning),
 		.tens(hour_warning_tens),
 		.ones(hour_warning_ones)
 	
@@ -308,17 +279,17 @@ module top(sys_clk, sys_rst_n, sw1,sw2,beep,uart_txd,one_wire, uart_rxd,oled_res
 	
 		BCD bcd_min_warning (
 	
-		.binary(min_warning_bcd),
+		.binary(min_warning),
 		.tens(min_warning_tens),
 		.ones(min_warning_ones)
 	
 	);
 	
 //温度转化和读取
-wire [15:0]		ds18b20_data;
-wire [7:0]		T;
-wire[3:0]		Tem_high;
-wire[3:0]		Tem_lower;
+wire	[15:0]		ds18b20_data;
+wire	[7:0]		T;
+wire	[3:0]		Tem_high;
+wire	[3:0]		Tem_lower;
 
 assign T = {1'b0,ds18b20_data[10:8],ds18b20_data[7:4]};
 BCD bcd_T (
@@ -337,11 +308,13 @@ DS18B20Z  u_DS18B20Z(
 	.data_out			(ds18b20_data)
 );
 reg	[7:0]	Temp_H;
+reg	[7:0]	TEM_high;
 always@(posedge sys_clk or negedge sys_rst_n) begin
 	if (1)	begin
 		if (!sys_rst_n) begin				//系统复位
 			uart_en <= 1'b0;		
 			Temp_H <= 8'b0;
+
 		end
 		else begin					
 			if(clk_1s == 1'b1) begin	//1S时间到
@@ -350,17 +323,17 @@ always@(posedge sys_clk or negedge sys_rst_n) begin
 				Temp_H[3:0] <= ds18b20_data[7:4];
 				
 				//Temp_H <= ((Temp_H<<4) &8'h70 | (Temp_L >>4) & 8'h0f);
-				
-				
-				uart_en  <= 1'b1;                               //拉高发送使能信号这里需要的是边沿触发	
-				uart_send_data <= Temp_H;
+				if(Temp_H >= TEM_high) begin
+					uart_en  <= 1'b1;                               //拉高发送使能信号这里需要的是边沿触发	
+					uart_send_data <= 8'hff;	
+				end
+				else if(warning_time) begin
+					uart_en  <= 1'b1;                               //拉高发送使能信号这里需要的是边沿触发	
+					uart_send_data <= Temp_H;
+				end
 			end
 			else	
-				uart_en  <= 1'b0;
-				
-				
-			
-			
+					uart_en  <= 1'b0;
 		end
 	end
 end
@@ -382,31 +355,7 @@ uart_send u_uart_send(
 // Temp_H[3:0] <= ds18b20_data[7:4];
 	
 	//时间显示模块
-	wire[3 : 0] time_sec_lower;
-	wire[3 : 0] time_sec_high;
-	wire[3 : 0] time_min_lower;
-	wire[3 : 0] time_min_high;
-	wire[3 : 0] time_hour_lower;
-	wire[3 : 0] time_hour_high;
-	
-	assign time_sec_lower = sec_ones;
-	assign time_sec_high = sec_tens;
-	assign time_min_lower = min_ones;
-	assign time_min_high = min_tens;
-	assign time_hour_lower = hour_ones;
-	assign time_hour_high = hour_tens;
-	
 
-	wire[3 : 0] warningtime_min_lower;
-	wire[3 : 0] warningtime_min_high;
-	wire[3 : 0] warningtime_hour_lower;
-	wire[3 : 0] warningtime_hour_high;
-	
-
-	assign warningtime_min_lower = min_warning_ones;
-	assign warningtime_min_high = min_warning_tens;
-	assign warningtime_hour_lower = hour_warning_ones;
-	assign warningtime_hour_high = hour_warning_tens;
 	wire		warning_TEM;
 
 	OLED12832 oled1 (
@@ -428,17 +377,17 @@ uart_send u_uart_send(
 		.warning_TEM(warning_TEM),
 		
 		.time_set(time_set),
-		.warningtime_min_lower(warningtime_min_lower),
-		.warningtime_min_high(warningtime_min_high),
-		.warningtime_hour_lower(warningtime_hour_lower),
-		.warningtime_hour_high(warningtime_hour_high),
+		.warningtime_min_lower(min_warning_ones),
+		.warningtime_min_high(min_warning_tens),
+		.warningtime_hour_lower(hour_warning_ones),
+		.warningtime_hour_high(hour_warning_tens),
 		
-		.time_sec_lower(time_sec_lower),
-		.time_sec_high(time_sec_high),
-		.time_min_lower(time_min_lower),
-		.time_min_high(time_min_high),
-		.time_hour_lower(time_hour_lower),
-		.time_hour_high(time_hour_high)
+		.time_sec_lower(sec_ones),
+		.time_sec_high(sec_tens),
+		.time_min_lower(min_ones),
+		.time_min_high(min_tens),
+		.time_hour_lower(hour_ones),
+		.time_hour_high(hour_tens)
 	); 
 	
 	
@@ -450,8 +399,7 @@ parameter  UART_BPS = 115200;           //定义串口波特率
 wire        uart_recv_done;              //UART接收完成
 wire  [7:0] uart_recv_data;              //UART接收数据
 wire [7:0]  music_tone;                     //音调
-reg	[7:0]	beep_tone;
-assign music_tone = beep_tone;
+
 
 //串口接收模块     
 uart_recv #(                          

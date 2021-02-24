@@ -18,4 +18,3 @@ FREQUENCY PORT "sys_clk" 12.000000 MHz ;
 LOCATE COMP "one_wire" SITE "N7" ;
 LOCATE COMP "uart_txd" SITE "B8" ;
 LOCATE COMP "uart_rxd" SITE "C8" ;
-LOCATE COMP "sw4" SITE "M10" ;

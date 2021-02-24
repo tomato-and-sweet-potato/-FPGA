@@ -116,5 +116,6 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
         uart_txd <= 1'b1;                   //空闲时发送端口为高电平
 end
 
-endmodule
+endmodule
+
 

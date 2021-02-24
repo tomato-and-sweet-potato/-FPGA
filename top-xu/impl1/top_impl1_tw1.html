@@ -22,7 +22,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 <A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4</big></U></B>
-Sun Feb 21 21:09:55 2021
+Wed Feb 24 11:16:47 2021
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -60,48 +60,48 @@ Passed: The following path meets requirements by 61.062ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              hour_i6  (from clk_1s +)
-   Destination:    FF         Data in        oled1/char_i0_i2  (to sys_clk_c +)
+   Source:         FF         Q              min_i5  (from clk_1s +)
+   Destination:    FF         Data in        oled1/char_i0_i3  (to sys_clk_c +)
 
    Delay:              22.105ns  (33.0% logic, 67.0% route), 13 logic levels.
 
  Constraint Details:
 
-     22.105ns physical path delay SLICE_1116 to oled1/SLICE_312 meets
+     22.105ns physical path delay SLICE_315 to oled1/SLICE_328 meets
      83.333ns delay constraint less
       0.166ns DIN_SET requirement (totaling 83.167ns) by 61.062ns
 
  Physical Path Details:
 
-      Data path SLICE_1116 to oled1/SLICE_312:
+      Data path SLICE_315 to oled1/SLICE_328:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452 SLICE_1116.CLK to  SLICE_1116.Q1 SLICE_1116 (from clk_1s)
-ROUTE         7   e 1.234  SLICE_1116.Q1 to *SLICE_1111.A1 hour_6
-CTOF_DEL    ---     0.495 *SLICE_1111.A1 to *SLICE_1111.F1 bcd_hour/SLICE_1111
-ROUTE         8   e 1.234 *SLICE_1111.F1 to */SLICE_759.D0 bcd_hour/hundres_1_N_305_2
-CTOF_DEL    ---     0.495 */SLICE_759.D0 to */SLICE_759.F0 bcd_hour/SLICE_759
-ROUTE         2   e 1.234 */SLICE_759.F0 to *SLICE_1111.B0 bcd_hour/n38557
-CTOF_DEL    ---     0.495 *SLICE_1111.B0 to *SLICE_1111.F0 bcd_hour/SLICE_1111
-ROUTE         4   e 1.234 *SLICE_1111.F0 to */SLICE_760.D1 bcd_hour/n38493
-CTOF_DEL    ---     0.495 */SLICE_760.D1 to */SLICE_760.F1 bcd_hour/SLICE_760
-ROUTE         1   e 1.234 */SLICE_760.F1 to */SLICE_759.D1 bcd_hour/n38481
-CTOF_DEL    ---     0.495 */SLICE_759.D1 to */SLICE_759.F1 bcd_hour/SLICE_759
-ROUTE         4   e 1.234 */SLICE_759.F1 to *SLICE_1010.C1 bcd_hour/hundres_1_N_307_1
-CTOF_DEL    ---     0.495 *SLICE_1010.C1 to *SLICE_1010.F1 bcd_hour/SLICE_1010
-ROUTE         4   e 1.234 *SLICE_1010.F1 to */SLICE_938.C0 hundres_0_N_316_3_adj_1843
-CTOF_DEL    ---     0.495 */SLICE_938.C0 to */SLICE_938.F0 bcd_hour/SLICE_938
-ROUTE         1   e 1.234 */SLICE_938.F0 to */SLICE_517.A0 bcd_hour/n38428
-CTOOFX_DEL  ---     0.721 */SLICE_517.A0 to *LICE_517.OFX0 oled1/mux_3352_i1/SLICE_517
-ROUTE         6   e 1.234 *LICE_517.OFX0 to */SLICE_464.A1 n10372
-CTOOFX_DEL  ---     0.721 */SLICE_464.A1 to *LICE_464.OFX0 mux_3260_i3/SLICE_464
-ROUTE         1   e 1.234 *LICE_464.OFX0 to */SLICE_509.C1 n21043
-CTOOFX_DEL  ---     0.721 */SLICE_509.C1 to *LICE_509.OFX0 oled1/mux_2428_i3/SLICE_509
-ROUTE         1   e 1.234 *LICE_509.OFX0 to */SLICE_956.D0 oled1/n9641
-CTOF_DEL    ---     0.495 */SLICE_956.D0 to */SLICE_956.F0 oled1/SLICE_956
-ROUTE         1   e 1.234 */SLICE_956.F0 to */SLICE_312.B0 oled1/n9780
-CTOOFX_DEL  ---     0.721 */SLICE_312.B0 to *LICE_312.OFX0 oled1/SLICE_312
-ROUTE         1   e 0.001 *LICE_312.OFX0 to *SLICE_312.DI0 oled1/char_167_N_1072_2 (to sys_clk_c)
+REG_DEL     ---     0.452  SLICE_315.CLK to   SLICE_315.Q1 SLICE_315 (from clk_1s)
+ROUTE         9   e 1.234   SLICE_315.Q1 to *SLICE_1066.B1 min_5
+CTOF_DEL    ---     0.495 *SLICE_1066.B1 to *SLICE_1066.F1 bcd_min/SLICE_1066
+ROUTE        11   e 1.234 *SLICE_1066.F1 to */SLICE_775.C0 bcd_min/hundres_1_N_341_1
+CTOF_DEL    ---     0.495 */SLICE_775.C0 to */SLICE_775.F0 bcd_min/SLICE_775
+ROUTE         2   e 1.234 */SLICE_775.F0 to  SLICE_1113.B1 bcd_min/n39467
+CTOF_DEL    ---     0.495  SLICE_1113.B1 to  SLICE_1113.F1 SLICE_1113
+ROUTE         4   e 1.234  SLICE_1113.F1 to */SLICE_774.D1 bcd_min/n39424
+CTOF_DEL    ---     0.495 */SLICE_774.D1 to */SLICE_774.F1 bcd_min/SLICE_774
+ROUTE         1   e 1.234 */SLICE_774.F1 to */SLICE_775.D1 bcd_min/n39416
+CTOF_DEL    ---     0.495 */SLICE_775.D1 to */SLICE_775.F1 bcd_min/SLICE_775
+ROUTE         4   e 1.234 */SLICE_775.F1 to *SLICE_1038.C0 bcd_min/hundres_1_N_343_1
+CTOF_DEL    ---     0.495 *SLICE_1038.C0 to *SLICE_1038.F0 bcd_min/SLICE_1038
+ROUTE         4   e 1.234 *SLICE_1038.F0 to */SLICE_928.C0 hundres_0_N_352_3
+CTOF_DEL    ---     0.495 */SLICE_928.C0 to */SLICE_928.F0 bcd_min/SLICE_928
+ROUTE         1   e 1.234 */SLICE_928.F0 to */SLICE_576.A0 bcd_min/n39353
+CTOOFX_DEL  ---     0.721 */SLICE_576.A0 to *LICE_576.OFX0 oled1/mux_3362_i1/SLICE_576
+ROUTE         6   e 1.234 *LICE_576.OFX0 to */SLICE_497.A1 n9316
+CTOOFX_DEL  ---     0.721 */SLICE_497.A1 to *LICE_497.OFX0 mux_3204_i4/SLICE_497
+ROUTE         1   e 1.234 *LICE_497.OFX0 to */SLICE_567.C1 n8609
+CTOOFX_DEL  ---     0.721 */SLICE_567.C1 to *LICE_567.OFX0 oled1/i31024/SLICE_567
+ROUTE         1   e 1.234 *LICE_567.OFX0 to *SLICE_1131.A1 oled1/n37829
+CTOF_DEL    ---     0.495 *SLICE_1131.A1 to *SLICE_1131.F1 oled1/SLICE_1131
+ROUTE         1   e 1.234 *SLICE_1131.F1 to */SLICE_328.B0 oled1/n37831
+CTOOFX_DEL  ---     0.721 */SLICE_328.B0 to *LICE_328.OFX0 oled1/SLICE_328
+ROUTE         1   e 0.001 *LICE_328.OFX0 to *SLICE_328.DI0 oled1/char_167_N_1108_3 (to sys_clk_c)
                   --------
                    22.105   (33.0% logic, 67.0% route), 13 logic levels.
 
@@ -127,27 +127,27 @@ All preferences were met.
 
 Found 4 clocks:
 
-Clock Domain: u_DS18B20Z/clk_1mhz   Source: u_DS18B20Z/SLICE_373.Q0   Loads: 13
+Clock Domain: u_DS18B20Z/clk_1mhz   Source: u_DS18B20Z/SLICE_390.Q0   Loads: 11
    No transfer within this clock domain is found
 
    Data transfers from:
    Clock Domain: sys_clk_c   Source: sys_clk.PAD
       Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 21
 
-Clock Domain: sys_clk_c   Source: sys_clk.PAD   Loads: 337
+Clock Domain: sys_clk_c   Source: sys_clk.PAD   Loads: 353
    Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
 
    Data transfers from:
-   Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_235.Q0
+   Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_249.Q0
       Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 1
 
-   Clock Domain: clk_1s   Source: devide_1s/SLICE_126.Q0
-      Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 25
+   Clock Domain: clk_1s   Source: devide_1s/SLICE_61.Q0
+      Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 33
 
-Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_235.Q0   Loads: 1
+Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_249.Q0   Loads: 1
    Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
 
-Clock Domain: clk_1s   Source: devide_1s/SLICE_126.Q0   Loads: 26
+Clock Domain: clk_1s   Source: devide_1s/SLICE_61.Q0   Loads: 27
    Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
 
    Data transfers from:
@@ -161,11 +161,11 @@ Clock Domain: clk_1s   Source: devide_1s/SLICE_126.Q0   Loads: 26
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 59533 paths, 4 nets, and 8208 connections (95.20% coverage)
+Constraints cover 66870 paths, 4 nets, and 8399 connections (95.25% coverage)
 
 --------------------------------------------------------------------------------
 <A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4</big></U></B>
-Sun Feb 21 21:09:55 2021
+Wed Feb 24 11:16:48 2021
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -202,24 +202,24 @@ Passed: The following path meets requirements by 0.351ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              key_2/key_rst_26  (from sys_clk_c +)
-   Destination:    FF         Data in        key_2/key_rst_pre_27  (to sys_clk_c +)
+   Source:         FF         Q              u_uart_send/tx_cnt_FSM_i6  (from sys_clk_c +)
+   Destination:    FF         Data in        u_uart_send/tx_cnt_FSM_i7  (to sys_clk_c +)
 
    Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
 
  Constraint Details:
 
-      0.332ns physical path delay SLICE_1001 to SLICE_1001 meets
+      0.332ns physical path delay SLICE_10 to SLICE_10 meets
      -0.019ns M_HLD and
       0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
 
  Physical Path Details:
 
-      Data path SLICE_1001 to SLICE_1001:
+      Data path SLICE_10 to SLICE_10:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133 SLICE_1001.CLK to  SLICE_1001.Q0 SLICE_1001 (from sys_clk_c)
-ROUTE         2   e 0.199  SLICE_1001.Q0 to  SLICE_1001.M1 key_2/key_rst (to sys_clk_c)
+REG_DEL     ---     0.133   SLICE_10.CLK to    SLICE_10.Q0 SLICE_10 (from sys_clk_c)
+ROUTE         3   e 0.199    SLICE_10.Q0 to    SLICE_10.M1 u_uart_send/n2110 (to sys_clk_c)
                   --------
                     0.332   (40.1% logic, 59.9% route), 1 logic levels.
 
@@ -243,27 +243,27 @@ All preferences were met.
 
 Found 4 clocks:
 
-Clock Domain: u_DS18B20Z/clk_1mhz   Source: u_DS18B20Z/SLICE_373.Q0   Loads: 13
+Clock Domain: u_DS18B20Z/clk_1mhz   Source: u_DS18B20Z/SLICE_390.Q0   Loads: 11
    No transfer within this clock domain is found
 
    Data transfers from:
    Clock Domain: sys_clk_c   Source: sys_clk.PAD
       Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 21
 
-Clock Domain: sys_clk_c   Source: sys_clk.PAD   Loads: 337
+Clock Domain: sys_clk_c   Source: sys_clk.PAD   Loads: 353
    Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
 
    Data transfers from:
-   Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_235.Q0
+   Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_249.Q0
       Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 1
 
-   Clock Domain: clk_1s   Source: devide_1s/SLICE_126.Q0
-      Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 25
+   Clock Domain: clk_1s   Source: devide_1s/SLICE_61.Q0
+      Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 33
 
-Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_235.Q0   Loads: 1
+Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_249.Q0   Loads: 1
    Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
 
-Clock Domain: clk_1s   Source: devide_1s/SLICE_126.Q0   Loads: 26
+Clock Domain: clk_1s   Source: devide_1s/SLICE_61.Q0   Loads: 27
    Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
 
    Data transfers from:
@@ -277,7 +277,7 @@ Clock Domain: clk_1s   Source: devide_1s/SLICE_126.Q0   Loads: 26
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 59533 paths, 4 nets, and 8532 connections (98.96% coverage)
+Constraints cover 66870 paths, 4 nets, and 8742 connections (99.14% coverage)
 
 
 

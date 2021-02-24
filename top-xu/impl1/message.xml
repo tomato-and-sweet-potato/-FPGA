@@ -2,23 +2,14 @@
 <BaliMessageLog>
     <Task name="Map">
         <Message>
-            <ID>1100679</ID>
+            <ID>52011047</ID>
             <Severity>Warning</Severity>
-            <Dynamic>D:/new porject/top-xu/top.lpf(17): Semantic error in &quot;LOCATE COMP &quot;sw3&quot; SITE &quot;M9&quot; ;&quot;: </Dynamic>
-            <Dynamic>sw3</Dynamic>
-            <Navigation>D:/new porject/top-xu/top.lpf</Navigation>
-            <Navigation>17</Navigation>
+            <Dynamic>oled1/i31026/GATE</Dynamic>
         </Message>
         <Message>
-            <ID>1166064</ID>
+            <ID>52011046</ID>
             <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>sw4</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001046</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>sw4</Dynamic>
+            <Dynamic>1</Dynamic>
         </Message>
     </Task>
     <Task name="Lattice_Synthesis">
@@ -33,34 +24,58 @@
         <Message>
             <ID>35901875</ID>
             <Severity>Warning</Severity>
-            <Dynamic>d:/new porject/top-xu/top.v(344): </Dynamic>
-            <Dynamic>uart_en</Dynamic>
+            <Dynamic>d:/new porject/top-xu/top.v(87): </Dynamic>
+            <Dynamic>TEM_high</Dynamic>
             <Navigation>d:/new porject/top-xu/top.v</Navigation>
-            <Navigation>344</Navigation>
+            <Navigation>87</Navigation>
         </Message>
         <Message>
             <ID>35901875</ID>
             <Severity>Warning</Severity>
-            <Dynamic>d:/new porject/top-xu/top.v(356): </Dynamic>
+            <Dynamic>d:/new porject/top-xu/top.v(315): </Dynamic>
             <Dynamic>uart_en</Dynamic>
             <Navigation>d:/new porject/top-xu/top.v</Navigation>
-            <Navigation>356</Navigation>
+            <Navigation>315</Navigation>
         </Message>
         <Message>
             <ID>35901875</ID>
             <Severity>Warning</Severity>
-            <Dynamic>d:/new porject/top-xu/top.v(357): </Dynamic>
+            <Dynamic>d:/new porject/top-xu/top.v(327): </Dynamic>
+            <Dynamic>uart_en</Dynamic>
+            <Navigation>d:/new porject/top-xu/top.v</Navigation>
+            <Navigation>327</Navigation>
+        </Message>
+        <Message>
+            <ID>35901875</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/top.v(328): </Dynamic>
             <Dynamic>uart_send_data</Dynamic>
             <Navigation>d:/new porject/top-xu/top.v</Navigation>
-            <Navigation>357</Navigation>
+            <Navigation>328</Navigation>
         </Message>
         <Message>
             <ID>35901875</ID>
             <Severity>Warning</Severity>
-            <Dynamic>d:/new porject/top-xu/top.v(360): </Dynamic>
+            <Dynamic>d:/new porject/top-xu/top.v(331): </Dynamic>
             <Dynamic>uart_en</Dynamic>
             <Navigation>d:/new porject/top-xu/top.v</Navigation>
-            <Navigation>360</Navigation>
+            <Navigation>331</Navigation>
+        </Message>
+        <Message>
+            <ID>35901875</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/top.v(332): </Dynamic>
+            <Dynamic>uart_send_data</Dynamic>
+            <Navigation>d:/new porject/top-xu/top.v</Navigation>
+            <Navigation>332</Navigation>
+        </Message>
+        <Message>
+            <ID>35901875</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/top.v(336): </Dynamic>
+            <Dynamic>uart_en</Dynamic>
+            <Navigation>d:/new porject/top-xu/top.v</Navigation>
+            <Navigation>336</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -137,6 +152,42 @@
             <Navigation>1</Navigation>
         </Message>
         <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/oled.v(94): </Dynamic>
+            <Dynamic>1022</Dynamic>
+            <Dynamic>168</Dynamic>
+            <Navigation>d:/new porject/top-xu/oled.v</Navigation>
+            <Navigation>94</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/oled.v(95): </Dynamic>
+            <Dynamic>1022</Dynamic>
+            <Dynamic>168</Dynamic>
+            <Navigation>d:/new porject/top-xu/oled.v</Navigation>
+            <Navigation>95</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/oled.v(96): </Dynamic>
+            <Dynamic>1022</Dynamic>
+            <Dynamic>168</Dynamic>
+            <Navigation>d:/new porject/top-xu/oled.v</Navigation>
+            <Navigation>96</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/oled.v(97): </Dynamic>
+            <Dynamic>1022</Dynamic>
+            <Dynamic>168</Dynamic>
+            <Navigation>d:/new porject/top-xu/oled.v</Navigation>
+            <Navigation>97</Navigation>
+        </Message>
+        <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
             <Dynamic>d:/new porject/top-xu/uart_recv.v(23): </Dynamic>
@@ -155,12 +206,12 @@
         <Message>
             <ID>35901330</ID>
             <Severity>Warning</Severity>
-            <Dynamic>d:/new porject/top-xu/top.v(474): </Dynamic>
+            <Dynamic>d:/new porject/top-xu/top.v(421): </Dynamic>
             <Dynamic>8</Dynamic>
             <Dynamic>5</Dynamic>
             <Dynamic>tone</Dynamic>
             <Navigation>d:/new porject/top-xu/top.v</Navigation>
-            <Navigation>474</Navigation>
+            <Navigation>421</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -173,18 +224,18 @@
         <Message>
             <ID>35931002</ID>
             <Severity>Warning</Severity>
-            <Dynamic>d:/new porject/top-xu/top.v(481): </Dynamic>
+            <Dynamic>d:/new porject/top-xu/top.v(428): </Dynamic>
             <Dynamic>clk</Dynamic>
             <Navigation>d:/new porject/top-xu/top.v</Navigation>
-            <Navigation>481</Navigation>
+            <Navigation>428</Navigation>
         </Message>
         <Message>
             <ID>35931002</ID>
             <Severity>Warning</Severity>
-            <Dynamic>d:/new porject/top-xu/top.v(482): </Dynamic>
+            <Dynamic>d:/new porject/top-xu/top.v(429): </Dynamic>
             <Dynamic>rst_n</Dynamic>
             <Navigation>d:/new porject/top-xu/top.v</Navigation>
-            <Navigation>482</Navigation>
+            <Navigation>429</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
@@ -222,7 +273,7 @@
             <ID>35931002</ID>
             <Severity>Warning</Severity>
             <Dynamic>d:/new porject/top-xu/oled.v(41): </Dynamic>
-            <Dynamic>\i393/mem_16_0</Dynamic>
+            <Dynamic>\i382/mem_16_0</Dynamic>
             <Navigation>d:/new porject/top-xu/oled.v</Navigation>
             <Navigation>41</Navigation>
         </Message>
@@ -233,11 +284,6 @@
             <Dynamic>\i601/note_96_0</Dynamic>
             <Navigation>d:/new porject/top-xu/music_player.v</Navigation>
             <Navigation>35</Navigation>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>sw4</Dynamic>
         </Message>
         <Message>
             <ID>35001747</ID>
@@ -462,6 +508,12 @@
         <Message>
             <ID>35001747</ID>
             <Severity>Warning</Severity>
+            <Dynamic>0</Dynamic>
+            <Dynamic>\m_music_play/music_delay</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
             <Dynamic>1</Dynamic>
             <Dynamic>\m_music_play/music_delay</Dynamic>
         </Message>
@@ -550,47 +602,34 @@
             <Dynamic>\m_music_play/music_delay</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>sw4</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>d:/new porject/top-xu/oled.v(192): </Dynamic>
-            <Dynamic>\oled1/x_pl_i0_i0</Dynamic>
-            <Navigation>d:/new porject/top-xu/oled.v</Navigation>
-            <Navigation>192</Navigation>
-        </Message>
-        <Message>
-            <ID>35935013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>d:/new porject/top-xu/top.v(365): </Dynamic>
-            <Dynamic>Temp_H_i7</Dynamic>
-            <Navigation>d:/new porject/top-xu/top.v</Navigation>
-            <Navigation>365</Navigation>
-        </Message>
-        <Message>
-            <ID>35935013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>d:/new porject/top-xu/uart.v(66): </Dynamic>
-            <Dynamic>\u_uart_send/tx_data_i7</Dynamic>
-            <Navigation>d:/new porject/top-xu/uart.v</Navigation>
-            <Navigation>66</Navigation>
-        </Message>
-        <Message>
             <ID>35935014</ID>
             <Severity>Warning</Severity>
-            <Dynamic>d:/new porject/top-xu/ds18b20.v(263): </Dynamic>
-            <Dynamic>\u_DS18B20Z/data_wr_i0_i2</Dynamic>
-            <Navigation>d:/new porject/top-xu/ds18b20.v</Navigation>
-            <Navigation>263</Navigation>
+            <Dynamic>d:/new porject/top-xu/top.v(180): </Dynamic>
+            <Dynamic>TEM_high_i0</Dynamic>
+            <Navigation>d:/new porject/top-xu/top.v</Navigation>
+            <Navigation>180</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/top.v(180): </Dynamic>
+            <Dynamic>TEM_high_i7</Dynamic>
+            <Navigation>d:/new porject/top-xu/top.v</Navigation>
+            <Navigation>180</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/top.v(337): </Dynamic>
+            <Dynamic>Temp_H_i7</Dynamic>
+            <Navigation>d:/new porject/top-xu/top.v</Navigation>
+            <Navigation>337</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
             <Dynamic>d:/new porject/top-xu/music_player.v(324): </Dynamic>
-            <Dynamic>\m_music_play/state__i4</Dynamic>
+            <Dynamic>\m_music_play/state_back_i0_i2</Dynamic>
             <Navigation>d:/new porject/top-xu/music_player.v</Navigation>
             <Navigation>324</Navigation>
         </Message>
@@ -603,26 +642,24 @@
             <Navigation>263</Navigation>
         </Message>
         <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/oled.v(198): </Dynamic>
+            <Dynamic>\oled1/x_pl_i0_i0</Dynamic>
+            <Navigation>d:/new porject/top-xu/oled.v</Navigation>
+            <Navigation>198</Navigation>
+        </Message>
+        <Message>
+            <ID>35935014</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>d:/new porject/top-xu/ds18b20.v(263): </Dynamic>
+            <Dynamic>\u_DS18B20Z/data_wr_i0_i2</Dynamic>
+            <Navigation>d:/new porject/top-xu/ds18b20.v</Navigation>
+            <Navigation>263</Navigation>
+        </Message>
+        <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>sw4</Dynamic>
-            <Navigation>sw4</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>sw4</Dynamic>
-        </Message>
-        <Message>
-            <ID>1163101</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>2</Dynamic>
         </Message>
     </Task>
     <Task name="PAR">
@@ -639,14 +676,14 @@
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
-   Signal=u_DS18B20Z/clk_1mhz loads=13 clock_loads=2
+   Signal=u_DS18B20Z/clk_1mhz loads=11 clock_loads=2
    Signal=oled1/clk_in_1Hz loads=1 clock_loads=1</Dynamic>
         </Message>
         <Message>
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
-   Signal=u_DS18B20Z/clk_1mhz loads=13 clock_loads=2
+   Signal=u_DS18B20Z/clk_1mhz loads=11 clock_loads=2
    Signal=oled1/clk_in_1Hz loads=1 clock_loads=1</Dynamic>
         </Message>
     </Task>

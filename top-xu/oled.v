@@ -36,7 +36,7 @@ module OLED12832
 	localparam IDLE = 6'h1, MAIN = 6'h2, INIT = 6'h4, SCAN = 6'h8, WRITE = 6'h10, DELAY = 6'h20;
 	localparam HIGH	= 1'b1, LOW = 1'b0;
 	localparam DATA	= 1'b1, CMD = 1'b0;
- 
+
 	reg [7:0] cmd [24:0];
 	reg [39:0] mem [122:0];
 	reg	[7:0]	y_p, x_ph, x_pl;
@@ -45,6 +45,7 @@ module OLED12832
 	reg	[4:0]	cnt_main, cnt_init, cnt_scan, cnt_write;
 	reg	[15:0]	num_delay, cnt_delay, cnt;
 	reg	[5:0] 	state, state_back;
+	reg	[7:0]	cnt_clear;
 	
 	//闪烁部分
 	reg			flash_bit;
@@ -64,8 +65,6 @@ module OLED12832
 	end
 
 
-
-
 //显示部分
 	always@(posedge clk or negedge rst_n) begin
 		if(!rst_n) begin
@@ -75,7 +74,7 @@ module OLED12832
 			num_delay <= 16'd5; cnt_delay <= 1'b0; cnt <= 1'b0;
 			oled_csn <= HIGH; oled_rst <= HIGH; oled_dcn <= CMD; oled_clk <= HIGH; oled_dat <= LOW;
 			state <= IDLE; state_back <= IDLE;
-			
+			cnt_clear <= 8'd0;
 		end else begin
 			case(state)
 				IDLE:begin
@@ -85,31 +84,37 @@ module OLED12832
 						num_delay <= 16'd5; cnt_delay <= 1'b0; cnt <= 1'b0;
 						oled_csn <= HIGH; oled_rst <= HIGH; oled_dcn <= CMD; oled_clk <= HIGH; oled_dat <= LOW;
 						state <= MAIN; state_back <= MAIN;
+						cnt_clear <= 8'd0;
 					end
 				MAIN:begin
-						if(cnt_main >= 5'd12) cnt_main <= 5'd3;
+						if(cnt_main >= 5'd16) cnt_main <= 5'd7;
 						else if(warning_TEM) cnt_main <= cnt_main + 1'b1;
 						case(cnt_main)	//MAIN状态
 							5'd0:	begin state <= INIT; end
-							5'd1:	begin y_p <= 8'hb0; x_ph <= 8'h10; x_pl <= 8'h00; num <= 5'd5; char <= "TIME:";state <= SCAN; end
-							5'd2:	begin y_p <= 8'hb1; x_ph <= 8'h10; x_pl <= 8'h00; num <= 5'd4; char <= "TEM:";state <= SCAN; end		
-							5'd3:	begin y_p <= 8'hb0; x_ph <= 8'h14; x_pl <= 8'h00; num <= 5'd1; if(time_set)if(flash_bit) char <= ":";else char <= " ";else char <= ":";state <= SCAN; end
-							5'd4:	begin y_p <= 8'hb0; x_ph <= 8'h15; x_pl <= 8'h08; num <= 5'd1; if(sw1 == 0) 
+							5'd1:	begin y_p <= 8'hb0; x_ph <= 8'h10; x_pl <= 8'h00; num <= 8'd128; char <= "                                                                                                                                ";state <= SCAN;end
+							5'd2:	begin y_p <= 8'hb1; x_ph <= 8'h10; x_pl <= 8'h00; num <= 8'd128; char <= "                                                                                                                                ";state <= SCAN; end
+							5'd3:	begin y_p <= 8'hb2; x_ph <= 8'h10; x_pl <= 8'h00; num <= 8'd128; char <= "                                                                                                                                ";state <= SCAN; end
+							5'd4:	begin y_p <= 8'hb3; x_ph <= 8'h10; x_pl <= 8'h00; num <= 8'd128; char <= "                                                                                                                                ";state <= SCAN; end
+
+							5'd5:	begin y_p <= 8'hb0; x_ph <= 8'h10; x_pl <= 8'h00; num <= 5'd5; char <= "TIME:";state <= SCAN; end
+							5'd6:	begin y_p <= 8'hb1; x_ph <= 8'h10; x_pl <= 8'h00; num <= 5'd4; char <= "TEM:";state <= SCAN; end		
+							5'd7:	begin y_p <= 8'hb0; x_ph <= 8'h14; x_pl <= 8'h00; num <= 5'd1; if(time_set)if(flash_bit) char <= ":";else char <= " ";else char <= ":";state <= SCAN; end
+							5'd8:	begin y_p <= 8'hb0; x_ph <= 8'h15; x_pl <= 8'h08; num <= 5'd1; if(sw1 == 0) 
 																										if(time_set)
 																											if(flash_bit) char <= ":";else char <= " ";
 																										else char <= ":";
 																									else char <= " ";state <= SCAN; end
 							
 								
-							5'd5:	begin y_p <= 8'hb0; x_ph <= 8'h13; x_pl <= 8'h00; num <= 5'd 1; if(sw1 == 0) char <= time_hour_high;else char <= warningtime_hour_high; state <= SCAN; end
-							5'd6:	begin y_p <= 8'hb0; x_ph <= 8'h13; x_pl <= 8'h08; num <= 5'd 1; if(sw1 == 0) char <= time_hour_lower;else char <= warningtime_hour_lower; state <= SCAN; end
-							5'd7:	begin y_p <= 8'hb0; x_ph <= 8'h14; x_pl <= 8'h08; num <= 5'd 1; if(sw1 == 0) char <= time_min_high;else char <= warningtime_min_high; state <= SCAN; end
-							5'd8:	begin y_p <= 8'hb0; x_ph <= 8'h15; x_pl <= 8'h00; num <= 5'd 1; if(sw1 == 0) char <= time_min_lower;else char <= warningtime_min_lower; state <= SCAN; end
-							5'd9:	begin y_p <= 8'hb0; x_ph <= 8'h16; x_pl <= 8'h00; num <= 5'd 1; if(sw1 == 0) char <= time_sec_high;else char <= " "; state <= SCAN; end
-							5'd10:	begin y_p <= 8'hb0; x_ph <= 8'h16; x_pl <= 8'h08; num <= 5'd 1; if(sw1 == 0) char <= time_sec_lower; else char <= " ";state <= SCAN; end
+							5'd9:	begin y_p <= 8'hb0; x_ph <= 8'h13; x_pl <= 8'h00; num <= 5'd 1; if(sw1 == 0) char <= time_hour_high;else char <= warningtime_hour_high; state <= SCAN; end
+							5'd10:	begin y_p <= 8'hb0; x_ph <= 8'h13; x_pl <= 8'h08; num <= 5'd 1; if(sw1 == 0) char <= time_hour_lower;else char <= warningtime_hour_lower; state <= SCAN; end
+							5'd11:	begin y_p <= 8'hb0; x_ph <= 8'h14; x_pl <= 8'h08; num <= 5'd 1; if(sw1 == 0) char <= time_min_high;else char <= warningtime_min_high; state <= SCAN; end
+							5'd12:	begin y_p <= 8'hb0; x_ph <= 8'h15; x_pl <= 8'h00; num <= 5'd 1; if(sw1 == 0) char <= time_min_lower;else char <= warningtime_min_lower; state <= SCAN; end
+							5'd13:	begin y_p <= 8'hb0; x_ph <= 8'h16; x_pl <= 8'h00; num <= 5'd 1; if(sw1 == 0) char <= time_sec_high;else char <= " "; state <= SCAN; end
+							5'd14:	begin y_p <= 8'hb0; x_ph <= 8'h16; x_pl <= 8'h08; num <= 5'd 1; if(sw1 == 0) char <= time_sec_lower; else char <= " ";state <= SCAN; end
 								
-							5'd11:	begin y_p <= 8'hb1; x_ph <= 8'h12; x_pl <= 8'h08; num <= 5'd 1; char <= T_high;state <= SCAN; end
-							5'd12:	begin y_p <= 8'hb1; x_ph <= 8'h13; x_pl <= 8'h00; num <= 5'd 1; char <= T_lower;state <= SCAN; end
+							5'd15:	begin y_p <= 8'hb1; x_ph <= 8'h12; x_pl <= 8'h08; num <= 5'd 1; char <= T_high;state <= SCAN; end
+							5'd16:	begin y_p <= 8'hb1; x_ph <= 8'h13; x_pl <= 8'h00; num <= 5'd 1; char <= T_lower;state <= SCAN; end
 	
 							default: state <= IDLE;
 						endcase
@@ -186,7 +191,7 @@ module OLED12832
 						if(cnt_delay >= num_delay) begin
 							cnt_delay <= 16'd0; state <= state_back; 
 						end else cnt_delay <= cnt_delay + 1'b1;
-					end
+					end				
 				default:state <= IDLE;
 			endcase
 		end
@@ -220,11 +225,13 @@ module OLED12832
 			cmd[22] = {8'h8d};
 			cmd[23] = {8'h14};
 			cmd[24] = {8'haf};
+
 		end 
  
 	//5*8点阵字库数据
 	always@(posedge rst_n)
 		begin
+ 
 			mem[  0] = {8'h3E, 8'h51, 8'h49, 8'h45, 8'h3E};   // 48  0
 			mem[  1] = {8'h00, 8'h42, 8'h7F, 8'h40, 8'h00};   // 49  1
 			mem[  2] = {8'h42, 8'h61, 8'h51, 8'h49, 8'h46};   // 50  2
