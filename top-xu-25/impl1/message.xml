@@ -647,14 +647,14 @@
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
-   Signal=u_DS18B20Z/clk_1mhz loads=15 clock_loads=2
+   Signal=u_DS18B20Z/clk_1mhz loads=11 clock_loads=2
    Signal=oled1/clk_in_1Hz loads=1 clock_loads=1</Dynamic>
         </Message>
         <Message>
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
-   Signal=u_DS18B20Z/clk_1mhz loads=15 clock_loads=2
+   Signal=u_DS18B20Z/clk_1mhz loads=11 clock_loads=2
    Signal=oled1/clk_in_1Hz loads=1 clock_loads=1</Dynamic>
         </Message>
     </Task>

@@ -6,22 +6,22 @@
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
             <Task name="Bitgen" build_result="0" update_result="3" update_time="0"/>
-            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1614251323"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1614263291"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1614251285">
-            <Task name="Map" build_result="2" update_result="0" update_time="1614251285"/>
-            <Task name="MapTrace" build_result="2" update_result="0" update_time="1614251287"/>
+        <Milestone name="Map" build_result="2" build_time="1614263245">
+            <Task name="Map" build_result="2" update_result="0" update_time="1614263245"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1614263247"/>
             <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1614251316">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1614251316"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1614251317"/>
+        <Milestone name="PAR" build_result="2" build_time="1614263283">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1614263283"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1614263285"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1614242796">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1614242796"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1614242848"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1614263241">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1614263241"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1614263291"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
             <Task name="HDLE" build_result="0" update_result="2" update_time="1614238786"/>
@@ -30,14 +30,14 @@
             <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
             <Task name="DEC" build_result="0" update_result="2" update_time="0"/>
         </Milestone>
-        <Report name=".vdbs/top_impl1_map.vdb" last_build_time="1614251285" last_build_size="408524"/>
-        <Report name="top_impl1.bgn" last_build_time="1614251323" last_build_size="4327"/>
-        <Report name="top_impl1.jed" last_build_time="1614251323" last_build_size="849501"/>
-        <Report name="top_impl1.lsedata" last_build_time="1614242782" last_build_size="3874196"/>
-        <Report name="top_impl1.ncd" last_build_time="1614251316" last_build_size="2056641"/>
-        <Report name="top_impl1.ngd" last_build_time="1614242796" last_build_size="1430926"/>
-        <Report name="top_impl1.tw1" last_build_time="1614251286" last_build_size="11767"/>
-        <Report name="top_impl1.twr" last_build_time="1614251317" last_build_size="67631"/>
-        <Report name="top_impl1_map.ncd" last_build_time="1614251284" last_build_size="1403100"/>
+        <Report name=".vdbs/top_impl1_map.vdb" last_build_time="1614263245" last_build_size="404678"/>
+        <Report name="top_impl1.bgn" last_build_time="1614263290" last_build_size="4327"/>
+        <Report name="top_impl1.jed" last_build_time="1614263290" last_build_size="849501"/>
+        <Report name="top_impl1.lsedata" last_build_time="1614263226" last_build_size="3873114"/>
+        <Report name="top_impl1.ncd" last_build_time="1614263283" last_build_size="2017043"/>
+        <Report name="top_impl1.ngd" last_build_time="1614263241" last_build_size="1410464"/>
+        <Report name="top_impl1.tw1" last_build_time="1614263247" last_build_size="11642"/>
+        <Report name="top_impl1.twr" last_build_time="1614263285" last_build_size="66381"/>
+        <Report name="top_impl1_map.ncd" last_build_time="1614263244" last_build_size="1382220"/>
     </Strategy>
 </BuildStatus>

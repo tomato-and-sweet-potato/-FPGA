@@ -13,7 +13,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4
-Thu Feb 25 19:08:06 2021
+Thu Feb 25 22:27:26 2021
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -42,56 +42,56 @@ Preference: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 63.303ns
+Passed: The following path meets requirements by 62.549ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              hour_warning__i6  (from sys_clk_c +)
+   Source:         FF         Q              hour_i7  (from clk_1s +)
    Destination:    FF         Data in        oled1/char_i0_i2  (to sys_clk_c +)
 
-   Delay:              19.864ns  (35.5% logic, 64.5% route), 13 logic levels.
+   Delay:              20.618ns  (34.2% logic, 65.8% route), 13 logic levels.
 
  Constraint Details:
 
-     19.864ns physical path delay SLICE_3 to oled1/SLICE_323 meets
+     20.618ns physical path delay SLICE_1101 to oled1/SLICE_320 meets
      83.333ns delay constraint less
-      0.166ns DIN_SET requirement (totaling 83.167ns) by 63.303ns
+      0.166ns DIN_SET requirement (totaling 83.167ns) by 62.549ns
 
  Physical Path Details:
 
-      Data path SLICE_3 to oled1/SLICE_323:
+      Data path SLICE_1101 to oled1/SLICE_320:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452    SLICE_3.CLK to     SLICE_3.Q0 SLICE_3 (from sys_clk_c)
-ROUTE         9   e 1.234     SLICE_3.Q0 to  SLICE_1123.B1 hour_warning_6
-CTOF_DEL    ---     0.495  SLICE_1123.B1 to  SLICE_1123.F1 SLICE_1123
-ROUTE         8   e 1.234  SLICE_1123.F1 to */SLICE_828.D1 bcd_hour_warning/hundres_1_N_339_2
-CTOF_DEL    ---     0.495 */SLICE_828.D1 to */SLICE_828.F1 bcd_hour_warning/SLICE_828
-ROUTE         2   e 0.480 */SLICE_828.F1 to */SLICE_828.B0 bcd_hour_warning/n37233
-CTOF_DEL    ---     0.495 */SLICE_828.B0 to */SLICE_828.F0 bcd_hour_warning/SLICE_828
-ROUTE         4   e 1.234 */SLICE_828.F0 to */SLICE_829.D1 bcd_hour_warning/n37195
-CTOF_DEL    ---     0.495 */SLICE_829.D1 to */SLICE_829.F1 bcd_hour_warning/SLICE_829
-ROUTE         1   e 1.234 */SLICE_829.F1 to *SLICE_1015.D0 bcd_hour_warning/n37186
-CTOF_DEL    ---     0.495 *SLICE_1015.D0 to *SLICE_1015.F0 bcd_hour_warning/SLICE_1015
-ROUTE         4   e 1.234 *SLICE_1015.F0 to   SLICE_902.C1 bcd_hour_warning/hundres_1_N_341_1
-CTOF_DEL    ---     0.495   SLICE_902.C1 to   SLICE_902.F1 SLICE_902
-ROUTE         4   e 1.234   SLICE_902.F1 to *SLICE_1019.C0 hundres_0_N_350_3_adj_1941
-CTOF_DEL    ---     0.495 *SLICE_1019.C0 to *SLICE_1019.F0 bcd_hour_warning/SLICE_1019
-ROUTE         1   e 1.234 *SLICE_1019.F0 to */SLICE_572.A1 bcd_hour_warning/n37125
-CTOOFX_DEL  ---     0.721 */SLICE_572.A1 to *LICE_572.OFX0 oled1/mux_3289_i1/SLICE_572
-ROUTE         6   e 1.234 *LICE_572.OFX0 to */SLICE_506.A1 n8144
-CTOOFX_DEL  ---     0.721 */SLICE_506.A1 to *LICE_506.OFX0 mux_3193_i3/SLICE_506
-ROUTE         1   e 1.234 *LICE_506.OFX0 to */SLICE_557.C0 n19393
-CTOOFX_DEL  ---     0.721 */SLICE_557.C0 to *LICE_557.OFX0 oled1/i29586/SLICE_557
-ROUTE         1   e 0.001 *LICE_557.OFX0 to *SLICE_559.FXA oled1/n35256
-FXTOOFX_DE  ---     0.241 *SLICE_559.FXA to *LICE_559.OFX1 oled1/i29587/SLICE_559
-ROUTE         1   e 1.234 *LICE_559.OFX1 to */SLICE_323.C0 oled1/n35258
-CTOOFX_DEL  ---     0.721 */SLICE_323.C0 to *LICE_323.OFX0 oled1/SLICE_323
-ROUTE         1   e 0.001 *LICE_323.OFX0 to *SLICE_323.DI0 oled1/n2105 (to sys_clk_c)
+REG_DEL     ---     0.452 SLICE_1101.CLK to  SLICE_1101.Q0 SLICE_1101 (from clk_1s)
+ROUTE        10   e 1.234  SLICE_1101.Q0 to  SLICE_1165.C0 hour_7
+CTOF_DEL    ---     0.495  SLICE_1165.C0 to  SLICE_1165.F0 SLICE_1165
+ROUTE         8   e 1.234  SLICE_1165.F0 to */SLICE_808.D0 bcd_hour/hundres_1_N_338_2
+CTOF_DEL    ---     0.495 */SLICE_808.D0 to */SLICE_808.F0 bcd_hour/SLICE_808
+ROUTE         2   e 1.234 */SLICE_808.F0 to *SLICE_1162.B1 bcd_hour/n38266
+CTOF_DEL    ---     0.495 *SLICE_1162.B1 to *SLICE_1162.F1 bcd_hour/SLICE_1162
+ROUTE         4   e 1.234 *SLICE_1162.F1 to */SLICE_907.D1 bcd_hour/n38223
+CTOF_DEL    ---     0.495 */SLICE_907.D1 to */SLICE_907.F1 bcd_hour/SLICE_907
+ROUTE         1   e 1.234 */SLICE_907.F1 to */SLICE_808.D1 bcd_hour/n38214
+CTOF_DEL    ---     0.495 */SLICE_808.D1 to */SLICE_808.F1 bcd_hour/SLICE_808
+ROUTE         4   e 1.234 */SLICE_808.F1 to   SLICE_855.C1 bcd_hour/hundres_1_N_340_1_adj_1906
+CTOF_DEL    ---     0.495   SLICE_855.C1 to   SLICE_855.F1 SLICE_855
+ROUTE         4   e 1.234   SLICE_855.F1 to */SLICE_905.C0 hundres_0_N_349_3
+CTOF_DEL    ---     0.495 */SLICE_905.C0 to */SLICE_905.F0 bcd_hour/SLICE_905
+ROUTE         1   e 1.234 */SLICE_905.F0 to */SLICE_576.A0 bcd_hour/n38160
+CTOOFX_DEL  ---     0.721 */SLICE_576.A0 to *LICE_576.OFX0 oled1/mux_3286_i1/SLICE_576
+ROUTE         6   e 1.234 *LICE_576.OFX0 to */SLICE_504.A1 n8142
+CTOOFX_DEL  ---     0.721 */SLICE_504.A1 to *LICE_504.OFX0 mux_3190_i3/SLICE_504
+ROUTE         1   e 1.234 *LICE_504.OFX0 to */SLICE_561.C0 n19395
+CTOOFX_DEL  ---     0.721 */SLICE_561.C0 to *LICE_561.OFX0 oled1/i30700/SLICE_561
+ROUTE         1   e 0.001 *LICE_561.OFX0 to *SLICE_563.FXA oled1/n36375
+FXTOOFX_DE  ---     0.241 *SLICE_563.FXA to *LICE_563.OFX1 oled1/i30701/SLICE_563
+ROUTE         1   e 1.234 *LICE_563.OFX1 to */SLICE_320.C0 oled1/n36377
+CTOOFX_DEL  ---     0.721 */SLICE_320.C0 to *LICE_320.OFX0 oled1/SLICE_320
+ROUTE         1   e 0.001 *LICE_320.OFX0 to *SLICE_320.DI0 oled1/n2105 (to sys_clk_c)
                   --------
-                   19.864   (35.5% logic, 64.5% route), 13 logic levels.
+                   20.618   (34.2% logic, 65.8% route), 13 logic levels.
 
-Report:   49.925MHz is the maximum frequency for this preference.
+Report:   48.114MHz is the maximum frequency for this preference.
 
 Report Summary
 --------------
@@ -100,7 +100,7 @@ Preference                              |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
 FREQUENCY PORT "sys_clk" 12.000000 MHz  |             |             |
-;                                       |   12.000 MHz|   49.925 MHz|  13  
+;                                       |   12.000 MHz|   48.114 MHz|  13  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -113,27 +113,27 @@ Clock Domains Analysis
 
 Found 4 clocks:
 
-Clock Domain: u_DS18B20Z/clk_1mhz   Source: u_DS18B20Z/SLICE_413.Q0   Loads: 15
+Clock Domain: u_DS18B20Z/clk_1mhz   Source: u_DS18B20Z/SLICE_410.Q0   Loads: 11
    No transfer within this clock domain is found
 
    Data transfers from:
    Clock Domain: sys_clk_c   Source: sys_clk.PAD
       Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 21
 
-Clock Domain: sys_clk_c   Source: sys_clk.PAD   Loads: 374
+Clock Domain: sys_clk_c   Source: sys_clk.PAD   Loads: 372
    Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
 
    Data transfers from:
-   Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_242.Q0
+   Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_253.Q0
       Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 1
 
-   Clock Domain: clk_1s   Source: devide_1s/SLICE_137.Q0
-      Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 33
+   Clock Domain: clk_1s   Source: devide_1s/SLICE_68.Q0
+      Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 25
 
-Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_242.Q0   Loads: 1
+Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_253.Q0   Loads: 1
    Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
 
-Clock Domain: clk_1s   Source: devide_1s/SLICE_137.Q0   Loads: 26
+Clock Domain: clk_1s   Source: devide_1s/SLICE_68.Q0   Loads: 26
    Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
 
    Data transfers from:
@@ -147,11 +147,11 @@ Timing summary (Setup):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 74535 paths, 4 nets, and 8866 connections (95.39% coverage)
+Constraints cover 70926 paths, 4 nets, and 8726 connections (95.38% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4
-Thu Feb 25 19:08:06 2021
+Thu Feb 25 22:27:27 2021
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -184,24 +184,24 @@ Passed: The following path meets requirements by 0.351ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              u_uart_recv/uart_rxd_d0_54  (from sys_clk_c +)
-   Destination:    FF         Data in        u_uart_recv/uart_rxd_d1_55  (to sys_clk_c +)
+   Source:         FF         Q              u_uart_send/tx_cnt_FSM_i7  (from sys_clk_c +)
+   Destination:    FF         Data in        u_uart_send/tx_cnt_FSM_i8  (to sys_clk_c +)
 
    Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
 
  Constraint Details:
 
-      0.332ns physical path delay SLICE_1005 to SLICE_1005 meets
+      0.332ns physical path delay SLICE_10 to SLICE_10 meets
      -0.019ns M_HLD and
       0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
 
  Physical Path Details:
 
-      Data path SLICE_1005 to SLICE_1005:
+      Data path SLICE_10 to SLICE_10:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133 SLICE_1005.CLK to  SLICE_1005.Q0 SLICE_1005 (from sys_clk_c)
-ROUTE         2   e 0.199  SLICE_1005.Q0 to  SLICE_1005.M1 u_uart_recv/uart_rxd_d0 (to sys_clk_c)
+REG_DEL     ---     0.133   SLICE_10.CLK to    SLICE_10.Q0 SLICE_10 (from sys_clk_c)
+ROUTE         4   e 0.199    SLICE_10.Q0 to    SLICE_10.M1 u_uart_send/n2114 (to sys_clk_c)
                   --------
                     0.332   (40.1% logic, 59.9% route), 1 logic levels.
 
@@ -225,27 +225,27 @@ Clock Domains Analysis
 
 Found 4 clocks:
 
-Clock Domain: u_DS18B20Z/clk_1mhz   Source: u_DS18B20Z/SLICE_413.Q0   Loads: 15
+Clock Domain: u_DS18B20Z/clk_1mhz   Source: u_DS18B20Z/SLICE_410.Q0   Loads: 11
    No transfer within this clock domain is found
 
    Data transfers from:
    Clock Domain: sys_clk_c   Source: sys_clk.PAD
       Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 21
 
-Clock Domain: sys_clk_c   Source: sys_clk.PAD   Loads: 374
+Clock Domain: sys_clk_c   Source: sys_clk.PAD   Loads: 372
    Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
 
    Data transfers from:
-   Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_242.Q0
+   Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_253.Q0
       Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 1
 
-   Clock Domain: clk_1s   Source: devide_1s/SLICE_137.Q0
-      Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 33
+   Clock Domain: clk_1s   Source: devide_1s/SLICE_68.Q0
+      Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 25
 
-Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_242.Q0   Loads: 1
+Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_253.Q0   Loads: 1
    Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
 
-Clock Domain: clk_1s   Source: devide_1s/SLICE_137.Q0   Loads: 26
+Clock Domain: clk_1s   Source: devide_1s/SLICE_68.Q0   Loads: 26
    Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
 
    Data transfers from:
@@ -259,7 +259,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 74535 paths, 4 nets, and 9213 connections (99.13% coverage)
+Constraints cover 70926 paths, 4 nets, and 9074 connections (99.18% coverage)
 
 
 

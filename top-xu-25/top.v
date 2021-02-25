@@ -329,7 +329,7 @@ always@(posedge sys_clk or negedge sys_rst_n) begin
 					
 				end
 				else begin
-					if(warning_time) begin//如果时间已经报警，发送温度
+					if(warning) begin//如果时间已经报警，发送温度
 						uart_en  <= 1'b1;                               
 						uart_send_data <= Temp_H;
 					end

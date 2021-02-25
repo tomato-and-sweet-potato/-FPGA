@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Feb 25 16:46:22 2021
+Thu Feb 25 22:27:05 2021
 
 
 Command Line:  synthesis -f top_impl1_lattice.synproj -gui -msgset C:/Users/admin/Desktop/new/-FPGA/top-xu-25/promote.xml 
@@ -1063,10 +1063,10 @@ FD1S3IX => 180
 FD1S3JX => 1
 GSR => 1
 IB => 8
-L6MUX21 => 10
-LUT4 => 1378
+L6MUX21 => 9
+LUT4 => 1343
 OB => 8
-PFUMX => 167
+PFUMX => 163
 ROM128X1A => 39
 ################### End Area Report ##################
 
@@ -1079,33 +1079,33 @@ Clock Nets
 Number of Clocks: 4
   Net : sys_clk_c, loads : 622
   Net : devide_1s/clk_1s, loads : 43
-  Net : u_DS18B20Z/clk_1mhz, loads : 15
+  Net : u_DS18B20Z/clk_1mhz, loads : 11
   Net : oled1/divide_1Hz/clk_in_1Hz, loads : 1
 Clock Enable Nets
 Number of Clock Enables: 82
 Top 10 highest fanout Clock Enables:
-  Net : oled1/sys_clk_c_enable_375, loads : 50
-  Net : key_1/key1_pulse, loads : 25
-  Net : u_DS18B20Z/sys_clk_c_enable_376, loads : 21
-  Net : oled1/sys_clk_c_enable_295, loads : 17
-  Net : oled1/sys_clk_c_enable_326, loads : 17
-  Net : u_uart_recv/sys_clk_c_enable_198, loads : 16
-  Net : sys_clk_c_enable_141, loads : 16
-  Net : u_uart_send/sys_clk_c_enable_181, loads : 16
-  Net : clk_1s_enable_9, loads : 8
-  Net : sys_clk_c_enable_350, loads : 8
+  Net : oled1/sys_clk_c_enable_378, loads : 50
+  Net : m_music_play/sys_clk_c_enable_347, loads : 32
+  Net : key_1/sys_clk_c_enable_380, loads : 25
+  Net : u_DS18B20Z/sys_clk_c_enable_345, loads : 21
+  Net : oled1/sys_clk_c_enable_367, loads : 17
+  Net : m_music_play/sys_clk_c_enable_372, loads : 17
+  Net : oled1/sys_clk_c_enable_271, loads : 17
+  Net : sys_clk_c_enable_140, loads : 16
+  Net : u_uart_send/sys_clk_c_enable_174, loads : 16
+  Net : u_uart_recv/sys_clk_c_enable_191, loads : 16
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : oled1/cnt_main_0, loads : 85
-  Net : oled1/state_2, loads : 84
-  Net : oled1/cnt_main_3, loads : 69
-  Net : oled1/cnt_main_4, loads : 66
+  Net : oled1/cnt_main_0, loads : 79
+  Net : oled1/state_2, loads : 75
+  Net : oled1/cnt_main_3, loads : 71
   Net : oled1/cnt_main_1, loads : 66
-  Net : oled1/state_0, loads : 65
-  Net : oled1/cnt_main_2, loads : 65
-  Net : u_DS18B20Z/state_0, loads : 55
-  Net : oled1/sys_clk_c_enable_375, loads : 50
-  Net : oled1/n39006, loads : 50
+  Net : oled1/cnt_main_4, loads : 64
+  Net : oled1/cnt_main_2, loads : 61
+  Net : oled1/state_0, loads : 59
+  Net : u_DS18B20Z/state_0, loads : 51
+  Net : u_DS18B20Z/state_back_2_N_515_2, loads : 51
+  Net : oled1/sys_clk_c_enable_378, loads : 50
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -1124,7 +1124,7 @@ create_clock -period 5.000000 -name     |             |             |
 clk1 [get_nets clk_1s]                  |  200.000 MHz|  103.252 MHz|     9 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets sys_clk_c]               |  200.000 MHz|   45.587 MHz|    17 *
+clk0 [get_nets sys_clk_c]               |  200.000 MHz|   45.253 MHz|    17 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -1132,10 +1132,10 @@ clk0 [get_nets sys_clk_c]               |  200.000 MHz|   45.587 MHz|    17 *
 2 constraints not met.
 
 
-Peak Memory Usage: 127.477  MB
+Peak Memory Usage: 126.383  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 13.719  secs
+Elapsed CPU time for LSE flow : 15.500  secs
 --------------------------------------------------------------
 
 
