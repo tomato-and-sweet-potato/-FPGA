@@ -15,7 +15,7 @@ module OLED12832
 	input[3 : 0] T_high,
 	input[3 : 0] T_lower,
 	input			warning_TEM,
-	input			display_,
+
 	
 	input			time_set,
 	
@@ -37,7 +37,7 @@ module OLED12832
 	localparam IDLE = 6'h1, MAIN = 6'h2, INIT = 6'h4, SCAN = 6'h8, WRITE = 6'h10, DELAY = 6'h20;
 	localparam HIGH	= 1'b1, LOW = 1'b0;
 	localparam DATA	= 1'b1, CMD = 1'b0;
-//	localparam CLEAR_DEPTH = 16'd;
+
 	reg [7:0] cmd [24:0];
 	reg [39:0] mem [122:0];
 	reg	[7:0]	y_p, x_ph, x_pl;
@@ -90,6 +90,7 @@ module OLED12832
 				MAIN:begin
 						if(cnt_main >= 5'd16) cnt_main <= 5'd7;
 						else if(warning_TEM ) cnt_main <= cnt_main + 1'b1;
+						if(warning_TEM == 1)
 						case(cnt_main)	//MAIN״̬
 							5'd0:	begin state <= INIT; end
 							5'd1:	begin y_p <= 8'hb0; x_ph <= 8'h10; x_pl <= 8'h00; num <= 8'd128; char <= "                                                                                                                                ";state <= SCAN;end

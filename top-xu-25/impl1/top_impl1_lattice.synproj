@@ -30,21 +30,21 @@
 
 
 -lpf 1
--p "D:/new porject/top-xu"
--ver "D:/new porject/top-xu/top.v"
-"D:/new porject/top-xu/clock.v"
-"D:/new porject/top-xu/oled.v"
-"D:/new porject/top-xu/bcd.v"
-"D:/new porject/top-xu/key.v"
-"D:/new porject/top-xu/music_player.v"
-"D:/new porject/top-xu/beep.v"
-"D:/new porject/top-xu/uart_recv.v"
-"D:/new porject/top-xu/ds18b20.v"
-"D:/new porject/top-xu/uart.v"
+-p "C:/Users/admin/Desktop/new/-FPGA/top-xu-25"
+-ver "C:/Users/admin/Desktop/new/-FPGA/top-xu-25/top.v"
+"C:/Users/admin/Desktop/new/-FPGA/top-xu-25/clock.v"
+"C:/Users/admin/Desktop/new/-FPGA/top-xu-25/oled.v"
+"C:/Users/admin/Desktop/new/-FPGA/top-xu-25/bcd.v"
+"C:/Users/admin/Desktop/new/-FPGA/top-xu-25/key.v"
+"C:/Users/admin/Desktop/new/-FPGA/top-xu-25/music_player.v"
+"C:/Users/admin/Desktop/new/-FPGA/top-xu-25/beep.v"
+"C:/Users/admin/Desktop/new/-FPGA/top-xu-25/uart_recv.v"
+"C:/Users/admin/Desktop/new/-FPGA/top-xu-25/ds18b20.v"
+"C:/Users/admin/Desktop/new/-FPGA/top-xu-25/uart.v"
 -top top
 
 
--p "D:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data" "D:/new porject/top-xu/impl1" "D:/new porject/top-xu"
+-p "D:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data" "C:/Users/admin/Desktop/new/-FPGA/top-xu-25/impl1" "C:/Users/admin/Desktop/new/-FPGA/top-xu-25"
 
 -ngd "top_impl1.ngd"
 

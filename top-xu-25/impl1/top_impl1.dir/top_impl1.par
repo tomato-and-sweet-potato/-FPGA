@@ -4,11 +4,11 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Feb 25 14:42:39 2021
+Thu Feb 25 16:46:41 2021
 
 D:/lscc/diamond/3.11_x64/ispfpga\bin\nt64\par -f top_impl1.p2t
 top_impl1_map.ncd top_impl1.dir top_impl1.prf -gui -msgset
-D:/new porject/top-xu/promote.xml
+C:/Users/admin/Desktop/new/-FPGA/top-xu-25/promote.xml
 
 
 Preference file: top_impl1.prf.
@@ -16,11 +16,11 @@ Preference file: top_impl1.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            59.191       0            0.007        0            34           Completed
+5_1   *      0            58.034       0            0.033        0            35           Completed
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 34 secs 
+Total (real) run time for 1-seed: 36 secs 
 
 par done!
 

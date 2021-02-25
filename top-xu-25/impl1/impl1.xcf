@@ -19,9 +19,9 @@
 				<BScanLen>1</BScanLen>
 				<BScanVal>0</BScanVal>
 			</Bypass>
-			<File>D:/new porject/top-xu/impl1/top_impl1.jed</File>
-			<FileTime>02/25/21 14:43:18</FileTime>
-			<JedecChecksum>0xC0F8</JedecChecksum>
+			<File>C:/Users/admin/Desktop/new/-FPGA/top-xu-25/impl1/top_impl1.jed</File>
+			<FileTime>02/25/21 16:47:28</FileTime>
+			<JedecChecksum>0xA6A5</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>

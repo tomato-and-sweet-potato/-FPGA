@@ -1,6 +1,6 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Thu Feb 25 14:43:18 2021 *
+NOTE DATE CREATED: Thu Feb 25 16:47:28 2021 *
 NOTE DESIGN NAME: top *
 NOTE DEVICE NAME: LCMXO2-4000HC-4CSBGA132 *
 NOTE PIN ASSIGNMENTS *
@@ -16,8 +16,8 @@ NOTE PINS oled_cs : F14 : out *
 NOTE PINS oled_res : G12 : out *
 NOTE PINS uart_txd : B8 : out *
 NOTE PINS beep : P8 : out *
-NOTE PINS one_wire : N7 : inout *
 NOTE PINS uart_rxd : C8 : in *
+NOTE PINS one_wire : N7 : inout *
 NOTE PINS key3 : M14 : in *
 NOTE PINS key2 : M13 : in *
 NOTE PINS key1 : L14 : in *
