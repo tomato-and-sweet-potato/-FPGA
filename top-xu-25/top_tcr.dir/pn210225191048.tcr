@@ -1,0 +1,5 @@
+#Start recording tcl command: 2/25/2021 19:05:16
+#Project Location: C:/Users/admin/Desktop/new/-FPGA/top-xu-25; Project name: top
+prj_project open "C:/Users/admin/Desktop/new/-FPGA/top-xu-25/top.ldf"
+prj_run Export -impl impl1
+#Stop recording: 2/25/2021 19:10:48
