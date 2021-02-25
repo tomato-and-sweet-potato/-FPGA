@@ -1,0 +1,275 @@
+
+Loading design for application trce from file top_impl1_map.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application trce from file 'xo2c4000.nph' in environment: D:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4
+Thu Feb 25 14:42:38 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o top_impl1.tw1 -gui -msgset D:/new porject/top-xu/promote.xml top_impl1_map.ncd top_impl1.prf 
+Design file:     top_impl1_map.ncd
+Preference file: top_impl1.prf
+Device,speed:    LCMXO2-4000HC,4
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 62.570ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              min_warning__i6  (from sys_clk_c +)
+   Destination:    FF         Data in        oled1/char_i0_i3  (to sys_clk_c +)
+
+   Delay:              20.597ns  (35.4% logic, 64.6% route), 13 logic levels.
+
+ Constraint Details:
+
+     20.597ns physical path delay SLICE_6 to oled1/SLICE_329 meets
+     83.333ns delay constraint less
+      0.166ns DIN_SET requirement (totaling 83.167ns) by 62.570ns
+
+ Physical Path Details:
+
+      Data path SLICE_6 to oled1/SLICE_329:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452    SLICE_6.CLK to     SLICE_6.Q0 SLICE_6 (from sys_clk_c)
+ROUTE         9   e 1.234     SLICE_6.Q0 to *SLICE_1054.B1 min_warning_6
+CTOF_DEL    ---     0.495 *SLICE_1054.B1 to *SLICE_1054.F1 bcd_min_warning/SLICE_1054
+ROUTE        11   e 1.234 *SLICE_1054.F1 to */SLICE_786.C1 bcd_min_warning/hundres_1_N_345_1
+CTOF_DEL    ---     0.495 */SLICE_786.C1 to */SLICE_786.F1 bcd_min_warning/SLICE_786
+ROUTE         2   e 0.480 */SLICE_786.F1 to */SLICE_786.B0 bcd_min_warning/n38115
+CTOF_DEL    ---     0.495 */SLICE_786.B0 to */SLICE_786.F0 bcd_min_warning/SLICE_786
+ROUTE         4   e 1.234 */SLICE_786.F0 to */SLICE_961.D1 bcd_min_warning/n38048
+CTOF_DEL    ---     0.495 */SLICE_961.D1 to */SLICE_961.F1 bcd_min_warning/SLICE_961
+ROUTE         1   e 0.480 */SLICE_961.F1 to */SLICE_961.D0 bcd_min_warning/n38036
+CTOF_DEL    ---     0.495 */SLICE_961.D0 to */SLICE_961.F0 bcd_min_warning/SLICE_961
+ROUTE         4   e 1.234 */SLICE_961.F0 to   SLICE_819.C1 bcd_min_warning/hundres_1_N_347_1
+CTOF_DEL    ---     0.495   SLICE_819.C1 to   SLICE_819.F1 SLICE_819
+ROUTE         4   e 1.234   SLICE_819.F1 to */SLICE_962.C0 hundres_0_N_356_3_adj_1893
+CTOF_DEL    ---     0.495 */SLICE_962.C0 to */SLICE_962.F0 bcd_min_warning/SLICE_962
+ROUTE         1   e 1.234 */SLICE_962.F0 to */SLICE_564.A1 bcd_min_warning/n37965
+CTOOFX_DEL  ---     0.721 */SLICE_564.A1 to *LICE_564.OFX0 oled1/mux_3408_i1/SLICE_564
+ROUTE         6   e 1.234 *LICE_564.OFX0 to */SLICE_494.A1 n9380
+CTOOFX_DEL  ---     0.721 */SLICE_494.A1 to *LICE_494.OFX0 mux_3249_i4/SLICE_494
+ROUTE         1   e 1.234 *LICE_494.OFX0 to */SLICE_555.C1 n8673
+CTOOFX_DEL  ---     0.721 */SLICE_555.C1 to *LICE_555.OFX0 oled1/i29531/SLICE_555
+ROUTE         1   e 1.234 *LICE_555.OFX0 to *SLICE_1141.A1 oled1/n36371
+CTOF_DEL    ---     0.495 *SLICE_1141.A1 to *SLICE_1141.F1 oled1/SLICE_1141
+ROUTE         1   e 1.234 *SLICE_1141.F1 to */SLICE_329.B0 oled1/n36373
+CTOOFX_DEL  ---     0.721 */SLICE_329.B0 to *LICE_329.OFX0 oled1/SLICE_329
+ROUTE         1   e 0.001 *LICE_329.OFX0 to *SLICE_329.DI0 oled1/char_167_N_1112_3 (to sys_clk_c)
+                  --------
+                   20.597   (35.4% logic, 64.6% route), 13 logic levels.
+
+Report:   48.163MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "sys_clk" 12.000000 MHz  |             |             |
+;                                       |   12.000 MHz|   48.163 MHz|  13  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 4 clocks:
+
+Clock Domain: u_DS18B20Z/clk_1mhz   Source: u_DS18B20Z/SLICE_390.Q0   Loads: 15
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: sys_clk_c   Source: sys_clk.PAD
+      Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 21
+
+Clock Domain: sys_clk_c   Source: sys_clk.PAD   Loads: 351
+   Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_212.Q0
+      Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_1s   Source: devide_1s/SLICE_97.Q0
+      Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 33
+
+Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_212.Q0   Loads: 1
+   Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
+
+Clock Domain: clk_1s   Source: devide_1s/SLICE_97.Q0   Loads: 27
+   Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: sys_clk_c   Source: sys_clk.PAD
+      Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 43
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 66094 paths, 4 nets, and 8358 connections (95.16% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4
+Thu Feb 25 14:42:38 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o top_impl1.tw1 -gui -msgset D:/new porject/top-xu/promote.xml top_impl1_map.ncd top_impl1.prf 
+Design file:     top_impl1_map.ncd
+Preference file: top_impl1.prf
+Device,speed:    LCMXO2-4000HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.351ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              key_2/key_rst_26  (from sys_clk_c +)
+   Destination:    FF         Data in        key_2/key_rst_pre_27  (to sys_clk_c +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay SLICE_1024 to SLICE_1024 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
+
+ Physical Path Details:
+
+      Data path SLICE_1024 to SLICE_1024:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 SLICE_1024.CLK to  SLICE_1024.Q0 SLICE_1024 (from sys_clk_c)
+ROUTE         2   e 0.199  SLICE_1024.Q0 to  SLICE_1024.M1 key_2/key_rst (to sys_clk_c)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "sys_clk" 12.000000 MHz  |             |             |
+;                                       |            -|            -|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 4 clocks:
+
+Clock Domain: u_DS18B20Z/clk_1mhz   Source: u_DS18B20Z/SLICE_390.Q0   Loads: 15
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: sys_clk_c   Source: sys_clk.PAD
+      Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 21
+
+Clock Domain: sys_clk_c   Source: sys_clk.PAD   Loads: 351
+   Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_212.Q0
+      Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_1s   Source: devide_1s/SLICE_97.Q0
+      Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 33
+
+Clock Domain: oled1/clk_in_1Hz   Source: oled1/divide_1Hz/SLICE_212.Q0   Loads: 1
+   Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
+
+Clock Domain: clk_1s   Source: devide_1s/SLICE_97.Q0   Loads: 27
+   Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: sys_clk_c   Source: sys_clk.PAD
+      Covered under: FREQUENCY PORT "sys_clk" 12.000000 MHz ;   Transfers: 43
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 66094 paths, 4 nets, and 8699 connections (99.04% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

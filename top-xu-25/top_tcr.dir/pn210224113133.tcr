@@ -1,0 +1,10 @@
+#Start recording tcl command: 2/24/2021 11:27:17
+#Project Location: D:/new porject/top-xu; Project name: top
+C:/Users/admin/Desktop/new/-FPGA
+top
+#Start recording tcl command: 2/24/2021 11:31:33
+#Project Location: C:/Users/admin/Desktop/new/-FPGA; Project name: top
+prj_project open "D:/new porject/top-xu/top.ldf"
+prj_run Export -impl impl1
+prj_project saveas -name "top" -dir "C:/Users/admin/Desktop/new/-FPGA"
+#Stop recording: 2/24/2021 11:31:33
